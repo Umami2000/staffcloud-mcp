@@ -1,0 +1,56 @@
+{
+  "name": "staffcloud-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the StaffCloud staff management API — 119 tools across 5 modules for scheduling, availability, bulk import, and more",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "staffcloud-mcp": "dist/index.js",
+    "staffcloud-mcp-setup": "dist/setup.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "setup": "node dist/setup.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "staffcloud",
+    "staff-management",
+    "ai-agent",
+    "scheduling",
+    "hr",
+    "staffing"
+  ],
+  "author": "Reon Schröder (https://aetlo.ch)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearekyo/staffcloud-mcp.git"
+  },
+  "homepage": "https://github.com/wearekyo/staffcloud-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/wearekyo/staffcloud-mcp/issues"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.js.map",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
+}

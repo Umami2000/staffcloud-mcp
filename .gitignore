@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.mcp.json
+*.tgz
+*.map
+.DS_Store
+
+# Claude Code data
+.auto-claude/
+.claude/
+CLAUDE.md
