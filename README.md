@@ -1,6 +1,5 @@
 # staffcloud-mcp
 
-[![npm version](https://img.shields.io/npm/v/staffcloud-mcp.svg)](https://www.npmjs.com/package/staffcloud-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
 [![MCP](https://img.shields.io/badge/MCP-compatible-8A2BE2.svg)](https://modelcontextprotocol.io)
@@ -106,26 +105,34 @@ Sensitive employee data (email, phone, address, birthday, gender) is **always pr
 
 ## Getting started
 
-### 1. Run the setup wizard
+### 1. Clone and install
 
 ```bash
-npx staffcloud-mcp --setup
+git clone https://github.com/Umami2000/staffcloud-mcp.git
+cd staffcloud-mcp
+npm install        # installs dependencies and builds automatically
+```
+
+### 2. Run the setup wizard
+
+```bash
+npm run setup
 ```
 
 The wizard validates your connection, lets you pick a default planner, choose which modules to load, and saves the config — all in under a minute.
 
 **API key:** Log into StaffCloud → Settings → API → Security Token. Copy the JWT (starts with `eyJ...`). Paste just the token, without the `Bearer ` prefix.
 
-### 2. Add to your AI client
+### 3. Add to your AI client
 
-Create `.mcp.json` in your project root (or add to `~/.claude/settings.local.json` for global access):
+The setup wizard can write this for you, or you can add it manually. Create `.mcp.json` in your project root (or add to `~/.claude/settings.local.json` for global access):
 
 ```json
 {
   "mcpServers": {
     "staffcloud": {
-      "command": "npx",
-      "args": ["staffcloud-mcp"],
+      "command": "node",
+      "args": ["/path/to/staffcloud-mcp/dist/index.js"],
       "env": {
         "STAFFCLOUD_API_URL": "https://yourcompany.staff.cloud/api/v1",
         "STAFFCLOUD_API_KEY": "your-jwt-token"
@@ -135,6 +142,8 @@ Create `.mcp.json` in your project root (or add to `~/.claude/settings.local.jso
 }
 ```
 
+Replace `/path/to/staffcloud-mcp` with the absolute path to where you cloned the repo.
+
 <details>
 <summary>Cursor / Windsurf / other MCP clients</summary>
 
@@ -142,9 +151,9 @@ Same JSON config — just place it where your client expects it. For Cursor: `.c
 
 </details>
 
-### 3. Start using it
+### 4. Start using it
 
-That's it. Your AI assistant now has full access to your StaffCloud instance.
+Restart Claude Code (or run `/mcp` to reconnect). Your AI assistant now has full access to your StaffCloud instance.
 
 ---
 
@@ -217,10 +226,9 @@ StaffCloud REST API
 ## Contributing
 
 ```bash
-git clone https://github.com/wearekyo/staffcloud-mcp.git
+git clone https://github.com/Umami2000/staffcloud-mcp.git
 cd staffcloud-mcp
-npm install
-npm run build
+npm install    # auto-builds via prepare script
 ```
 
 After editing source files, run `npm run build` and restart your MCP connection.

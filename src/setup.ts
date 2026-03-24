@@ -7,14 +7,15 @@
  * and writes the MCP configuration to the appropriate settings file.
  *
  * Usage:
- *   npx staffcloud-mcp --setup
- *   node dist/setup.js
+ *   npm run setup
+ *   node dist/index.js --setup
  */
 
 import * as readline from "node:readline";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import * as os from "node:os";
+import { fileURLToPath } from "node:url";
 
 // ─── Helpers ────────────────────────────────────────────────────
 
@@ -300,9 +301,12 @@ function writeConfig(
   if (modules && modules !== "core") {
     env.STAFFCLOUD_MODULES = modules;
   }
+  // Resolve absolute path to dist/index.js (works from any clone location)
+  const distDir = path.dirname(fileURLToPath(import.meta.url));
+  const indexPath = path.join(distDir, "index.js");
   const serverConfig = {
-    command: "npx",
-    args: ["staffcloud-mcp"],
+    command: "node",
+    args: [indexPath],
     env,
   };
 
@@ -704,13 +708,15 @@ async function main() {
       if (selectedModules !== "core") {
         printEnv.STAFFCLOUD_MODULES = selectedModules;
       }
+      const distDir = path.dirname(fileURLToPath(import.meta.url));
+      const indexPath = path.join(distDir, "index.js");
       console.log(
         JSON.stringify(
           {
             mcpServers: {
               staffcloud: {
-                command: "npx",
-                args: ["staffcloud-mcp"],
+                command: "node",
+                args: [indexPath],
                 env: printEnv,
               },
             },
