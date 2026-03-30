@@ -836,7 +836,8 @@ export interface CreateShiftArgs {
   quantity?: number; // positions needed (default 1)
   description?: string; // event description
   activate?: boolean; // activate event after creation (default true)
-  descriptionField?: string; // field name for description (default: dynamic_field_51)
+  descriptionField?: string; // field name for description (tenant-specific)
+  breakRules?: "swiss" | "none"; // break rule set: "swiss" = ArG Art. 15, "none" = no auto-breaks
 }
 
 /**
@@ -965,8 +966,8 @@ export async function createShift(
       law_reference: "User override",
     };
     breakApplied = true;
-  } else if (!args.skip_break) {
-    // Auto-calculate per Swiss law
+  } else if (!args.skip_break && args.breakRules === "swiss") {
+    // Auto-calculate per Swiss law (only when breakRules is "swiss")
     breakInfo = calculateSwissBreak(args.date, args.start_time, endTime);
     if (breakInfo) {
       breakApplied = true;
@@ -988,8 +989,8 @@ export async function createShift(
     eventData.break_end = breakInfo.break_end;
   }
 
-  if (args.description) {
-    eventData[args.descriptionField || "dynamic_field_51"] = args.description;
+  if (args.description && args.descriptionField) {
+    eventData[args.descriptionField] = args.description;
   }
 
   const event = (await client.createEvent(eventData)) as AnyRecord;
@@ -1295,6 +1296,7 @@ export interface BulkCreateEventsArgs {
   default_function_id?: number;
   default_quantity?: number;
   descriptionField?: string;
+  breakRules?: "swiss" | "none";
   dry_run?: boolean;
 }
 
@@ -1327,7 +1329,7 @@ export async function bulkCreateEvents(
       }
 
       const breakCalc =
-        !e.skip_break && endTime
+        !e.skip_break && args.breakRules === "swiss" && endTime
           ? calculateSwissBreak(e.date, e.start_time, endTime)
           : null;
 
@@ -1408,7 +1410,7 @@ export async function bulkCreateEvents(
           ),
           law_reference: "User override",
         };
-      } else if (!e.skip_break) {
+      } else if (!e.skip_break && args.breakRules === "swiss") {
         breakInfo = calculateSwissBreak(e.date, e.start_time, endTime);
       }
 
@@ -1434,8 +1436,8 @@ export async function bulkCreateEvents(
         eventData.break_end = breakInfo.break_end;
       }
 
-      if (e.description) {
-        eventData[args.descriptionField || "dynamic_field_51"] = e.description;
+      if (e.description && args.descriptionField) {
+        eventData[args.descriptionField] = e.description;
       }
 
       const created = (await client.createEvent(eventData)) as AnyRecord;
