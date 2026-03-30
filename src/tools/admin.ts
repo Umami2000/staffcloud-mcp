@@ -1,5 +1,5 @@
 import type { ToolDefinition, ToolContext } from "./types.js";
-import { validate, buildParams, formatResult, zId, zFields, zData, zListParams } from "./shared.js";
+import { validate, buildParams, formatResult, filterEmployeeFields, zId, zFields, zData, zListParams } from "./shared.js";
 import { z } from "zod";
 
 export const tools: ToolDefinition[] = [
@@ -19,6 +19,8 @@ export const tools: ToolDefinition[] = [
     description:
       "Create a webhook for event-driven notifications. " +
       "Triggers: employee.created, employee.updated, assignment.status_changed, etc. " +
+      "⚠️ PRIVACY NOTE: Webhook payloads from StaffCloud may include PII (email, phone, etc.) — the MCP server's PII filtering " +
+      "does not apply to webhook payloads sent directly by StaffCloud to your URL. " +
       'Example: {"trigger":{"event":"employee.updated"},"webhook":{"url":"https://example.com/hook"}}.',
     inputSchema: {
       type: "object",
@@ -213,7 +215,7 @@ export async function handle(
   ctx: ToolContext
 ): Promise<string | null> {
   if (!TOOL_NAMES.has(name)) return null;
-  const { client } = ctx;
+  const { client, piiAccess } = ctx;
 
   switch (name) {
     // ── Webhooks ──
@@ -264,13 +266,15 @@ export async function handle(
       return formatResult(await client.deleteExternalStaffRequest(v.id));
     }
 
-    // ── External Workers ──
+    // ── External Workers (PII-filtered like employees) ──
     case "list_external_workers": {
-      validate(zListParams, args, name);
-      return formatResult(await client.listExternalWorkers(buildParams(args)));
+      const v = validate(zListParams, args, name);
+      v.fields = filterEmployeeFields(v.fields as string | undefined, piiAccess);
+      return formatResult(await client.listExternalWorkers(buildParams(v)));
     }
     case "get_external_worker": {
       const v = validate(z.object({ id: zId, fields: zFields }), args, name);
+      v.fields = filterEmployeeFields(v.fields, piiAccess);
       return formatResult(await client.getExternalWorker(v.id, buildParams(v)));
     }
     case "create_external_worker": {

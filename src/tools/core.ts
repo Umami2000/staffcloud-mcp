@@ -26,8 +26,8 @@ export const tools: ToolDefinition[] = [
       "Use this to find employees by status, location, update date, or any field. " +
       "Filter operators: =~ (case-insensitive like), = (equals), =- (not equals), =< (less than), " +
       "=> (greater than), =null, =-null, comma-separated for OR. " +
-      "Employee status values: 0=Nicht abgeschlossen, 1=Bewerber, 2=Vorläufiger Kandidat, " +
-      "3=Kandidat, 4=Aktiv, 5=Inaktiv, 6=Gelöscht. " +
+      "Employee status values: 0=Incomplete, 1=Applicant, 2=Preliminary Candidate, " +
+      "3=Candidate, 4=Active, 5=Inactive, 6=Deleted. " +
       "Example: status=4 for active, fields=id,firstname,lastname,city, sort=-updated_at. " +
       "Tip: always use 'fields' to reduce payload — full employee records have 136 fields (~8MB for all). " +
       "Supports embed=employeeAvailability to include availability data inline.",
@@ -88,12 +88,12 @@ export const tools: ToolDefinition[] = [
     name: "create_employee",
     description:
       "Create a new employee in StaffCloud. Required fields vary by tenant — always include: " +
-      "firstname, lastname, email, mobile, birthday (YYYY-MM-DD), gender (collection value ID, e.g. 260=Female, 261=Male), " +
+      "firstname, lastname, email, mobile, birthday (YYYY-MM-DD), gender (use resolve_field_value or list_collection_values to find IDs), " +
       "wage_profile_id (use list_wage_profiles). Some tenants require additional '_dyn_attr_<id>' fields — " +
       "POST with minimal data first, the validation error will list required fields. " +
-      "FIELD TYPE FORMATS: Dropdown fields (gender, country, canton, language): use integer collection value ID. " +
+      "FIELD TYPE FORMATS: Dropdown fields (gender, country, etc.): use integer collection value ID — use resolve_field_value to look up. " +
       "Multi-select (qualifications): use array of IDs, e.g. [1,2,3]. " +
-      "Phone: E.164 format (+41 79 123 45 67). Date: YYYY-MM-DD.",
+      "Phone: E.164 format. Date: YYYY-MM-DD.",
     inputSchema: {
       type: "object" as const,
       properties: {
@@ -115,10 +115,9 @@ export const tools: ToolDefinition[] = [
       "Text/email/phone/URL: plain string. " +
       "Date: \"YYYY-MM-DD\". " +
       "Boolean/checkbox: true or 1. " +
-      "Dropdown (single-select, e.g. gender, country, canton, communication_language, dynamic_field_45/marital, dynamic_field_47/work_permit, dynamic_field_65/team): " +
-      "MUST use integer collection value ID, NOT the display name. E.g. gender=261 for Male, NOT \"Male\". " +
-      "Use list_collection_values to look up IDs. Key collections: 9=Gender (260=Female,261=Male), 8=Countries (223=Switzerland), " +
-      "11=Language (2=Deutsch,1=English,3=Français), 19=Canton (335=GR,351=ZH,331=BE), 13=Marital (264=Single,265=Married). " +
+      "Dropdown (single-select, e.g. gender, country, canton, communication_language): " +
+      "MUST use integer collection value ID, NOT the display name. " +
+      "Use resolve_field_value to look up IDs (e.g. field='gender', value='Female'), or list_collection_values. " +
       "Multi-select (qualifications, languages): use array of integer IDs, e.g. qualifications=[1,2,3,4,5] or {\"1\":true,\"2\":true}. " +
       "To clear a dropdown: set to 0. To clear a multi-select: set to [].",
     inputSchema: {
@@ -139,7 +138,7 @@ export const tools: ToolDefinition[] = [
     description:
       "⛔ DESTRUCTIVE — Permanently delete an employee by ID. This action CANNOT be undone and removes ALL associated data " +
       "(assignments, work times, ratings, files). ALWAYS confirm with the user before executing. " +
-      "SAFER ALTERNATIVE: Use set_employee_state with state=5 (Inaktiv) to deactivate, or state=6 (Gelöscht) for soft-delete.",
+      "SAFER ALTERNATIVE: Use set_employee_state with state=5 (Inactive) to deactivate, or state=6 (Deleted) for soft-delete.",
     inputSchema: {
       type: "object" as const,
       properties: {
@@ -152,8 +151,7 @@ export const tools: ToolDefinition[] = [
     name: "set_employee_state",
     description:
       "⚠️ STATE CHANGE — Change an employee's lifecycle status. Confirm with the user before changing state. " +
-      "States: 1=Bewerber (applicant), 2=Vorläufiger Kandidat (preliminary candidate), " +
-      "3=Kandidat (candidate), 4=Aktiv (active), 5=Inaktiv (inactive), 6=Gelöscht (deleted/soft-delete). " +
+      "States: 1=Applicant, 2=Preliminary Candidate, 3=Candidate, 4=Active, 5=Inactive, 6=Deleted (soft-delete). " +
       "Setting state=5 or state=6 will remove the employee from active scheduling. " +
       "Example: set state=4 to activate a candidate, state=5 to deactivate. " +
       "This is the SAFER alternative to delete_employee.",
@@ -467,11 +465,11 @@ export const tools: ToolDefinition[] = [
   {
     name: "create_shift",
     description:
-      "SMART TOOL — Create a shift (event) with automatic Swiss labor law break calculation. " +
+      "SMART TOOL — Create a shift (event) with optional automatic break calculation. " +
       "Answers: 'Create a shift tomorrow at 07:00 for 9 hours', 'Add an evening shift next Friday'. " +
-      "Automatically applies Swiss Arbeitsgesetz (ArG Art. 15) break rules: " +
-      ">5.5h → 15min, >7h → 30min, >9h → 60min break. Break is centered at the shift midpoint. " +
-      "Duration = total time at workplace (break inclusive): 9h shift = 8h work + 1h break. " +
+      "When STAFFCLOUD_BREAK_RULES=swiss, automatically applies ArG Art. 15 break rules: " +
+      ">5.5h → 15min, >7h → 30min, >9h → 60min break centered at the shift midpoint. " +
+      "Duration = total time at workplace (break inclusive). " +
       "Creates the event, activates it (status=Active), and optionally creates an event function (role). " +
       "User can override breaks with break_start/break_end or skip them with skip_break=true.",
     inputSchema: {
@@ -697,8 +695,9 @@ export const tools: ToolDefinition[] = [
     name: "format_phone",
     description:
       "UTILITY — Format a phone number to Swiss E.164 format (+41 XX XXX XX XX). " +
-      "Handles common inputs: '079 123 45 67' → '+41 79 123 45 67', '0041791234567' → '+41 79 123 45 67'. " +
-      "Use this before creating contacts or employees to ensure the phone number is accepted by the API.",
+      "Swiss-specific: handles '079 123 45 67' → '+41 79 123 45 67', '0041791234567' → '+41 79 123 45 67'. " +
+      "Non-Swiss numbers are returned with minimal cleanup. " +
+      "Note: Auto-formatting on create/update is only active when STAFFCLOUD_PHONE_FORMAT=swiss.",
     inputSchema: {
       type: "object" as const,
       properties: {
@@ -721,7 +720,7 @@ export async function handle(
 ): Promise<string | null> {
   if (!TOOL_NAMES.has(name)) return null;
 
-  const { client, descriptionField, defaultPlannerId, piiAccess } = ctx;
+  const { client, descriptionField, defaultPlannerId, piiAccess, phoneFormat, breakRules } = ctx;
 
   let result: string;
 
@@ -756,13 +755,13 @@ export async function handle(
     }
     case "create_employee": {
       const v = validate(z.object({ data: zData }), args, name);
-      const empData = await resolveQualifications(autoFormatPhones(v.data), client);
+      const empData = await resolveQualifications(autoFormatPhones(v.data, phoneFormat), client);
       result = formatResult(await client.createEmployee(empData));
       return result;
     }
     case "update_employee": {
       const v = validate(z.object({ id: zId, data: zData }), args, name);
-      const empData = await resolveQualifications(autoFormatPhones(v.data), client);
+      const empData = await resolveQualifications(autoFormatPhones(v.data, phoneFormat), client);
       result = formatResult(await client.updateEmployee(v.id, empData));
       return result;
     }
@@ -985,6 +984,7 @@ export async function handle(
         ...v,
         planner_id: shiftPlannerId,
         descriptionField,
+        breakRules,
       }));
       return result;
     }

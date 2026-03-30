@@ -23,6 +23,10 @@ export interface ToolContext {
   defaultPlannerId?: number;
   /** When false (default), sensitive PII fields are stripped from employee output. */
   piiAccess: boolean;
+  /** Break rule set to apply. "swiss" = ArG Art. 15, "none" = no automatic breaks. Default: "none". */
+  breakRules: "swiss" | "none";
+  /** Phone formatting region. "swiss" = E.164 CH format, "none" = pass-through. Default: "none". */
+  phoneFormat: "swiss" | "none";
 }
 
 export interface ToolModule {

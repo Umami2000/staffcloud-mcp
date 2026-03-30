@@ -20,7 +20,9 @@
  *   STAFFCLOUD_MODULES              - Comma-separated modules to load (default: "core")
  *                                     Use "all" to load everything (119 tools)
  *   STAFFCLOUD_DEFAULT_PLANNER_ID   - Default planner ID for create operations
- *   STAFFCLOUD_DESCRIPTION_FIELD    - Dynamic field for event descriptions (default: dynamic_field_51)
+ *   STAFFCLOUD_DESCRIPTION_FIELD    - Dynamic field for event descriptions (tenant-specific, e.g. dynamic_field_51)
+ *   STAFFCLOUD_BREAK_RULES          - Break calculation: "swiss" (ArG Art. 15) or "none" (default: "none")
+ *   STAFFCLOUD_PHONE_FORMAT         - Phone formatting: "swiss" (+41 format) or "none" (default: "none")
  */
 
 // ─── Handle --setup flag ─────────────────────────────────────
@@ -68,11 +70,17 @@ if (!API_URL || !API_KEY) {
   process.exit(1);
 }
 
-const DESCRIPTION_FIELD =
-  process.env["STAFFCLOUD_DESCRIPTION_FIELD"] || "dynamic_field_51";
+const DESCRIPTION_FIELD = process.env["STAFFCLOUD_DESCRIPTION_FIELD"] || "";
 const DEFAULT_PLANNER_ID = process.env["STAFFCLOUD_DEFAULT_PLANNER_ID"]
   ? parseInt(process.env["STAFFCLOUD_DEFAULT_PLANNER_ID"], 10)
   : undefined;
+
+// Break rules: "swiss" applies ArG Art. 15 automatically; "none" (default) skips auto-calculation.
+const BREAK_RULES = (process.env["STAFFCLOUD_BREAK_RULES"] === "swiss" ? "swiss" : "none") as "swiss" | "none";
+
+// Phone formatting: "swiss" auto-formats to +41 XX XXX XX XX; "none" (default) passes through.
+const PHONE_FORMAT = (process.env["STAFFCLOUD_PHONE_FORMAT"] === "swiss" ? "swiss" : "none") as "swiss" | "none";
+
 const client = new StaffCloudClient({ baseUrl: API_URL, apiKey: API_KEY });
 
 // ─── Module Registry ──────────────────────────────────────────
@@ -130,6 +138,8 @@ const ctx: ToolContext = {
   descriptionField: DESCRIPTION_FIELD,
   defaultPlannerId: DEFAULT_PLANNER_ID,
   piiAccess: false, // PII protection is always on — sensitive employee data is never exposed
+  breakRules: BREAK_RULES,
+  phoneFormat: PHONE_FORMAT,
 };
 
 // ─── Rate Limit Warning ───────────────────────────────────────

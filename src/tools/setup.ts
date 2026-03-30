@@ -154,11 +154,9 @@ export const tools: ToolDefinition[] = [
     description:
       "Create a new location via the collections API (POST /collections/7/values). " +
       "REQUIRED: name and country_id. " +
-      "Common country IDs: 223=Schweiz, 57=Deutschland, 72=France, 13=Austria, 105=Italy. " +
-      "For other countries: use list_collection_values with collection_id=8. " +
+      "Use list_collection_values to find country IDs (collection for countries) and county/region IDs. " +
       "Fields: name, code, line_1, line_2, zip, city, country_id, county_id. " +
-      "Use list_collection_values with collection_id=19 for Swiss Kanton IDs. " +
-      "Example: {\"name\":\"Engadin Arena\",\"city\":\"St. Moritz\",\"zip\":\"7500\",\"country_id\":223}.",
+      'Example: {"name":"Main Arena","city":"Zürich","zip":"8001","country_id":<your_country_id>}.',
     inputSchema: {
       type: "object" as const,
       properties: {
@@ -175,9 +173,8 @@ export const tools: ToolDefinition[] = [
     description:
       "Update a location via the collections API (PUT /collections/7/value/{id}). " +
       "REQUIRED: country_id must always be included. " +
-      "Common country IDs: 223=Schweiz, 57=Deutschland, 72=France, 13=Austria, 105=Italy. " +
-      "Fields: name, code, line_1, line_2, zip, city, country_id, county_id. " +
-      "Use list_collection_values with collection_id=19 for Swiss Kanton IDs.",
+      "Use list_collection_values to look up country and county/region IDs for your tenant. " +
+      "Fields: name, code, line_1, line_2, zip, city, country_id, county_id.",
     inputSchema: {
       type: "object" as const,
       properties: {
@@ -385,12 +382,12 @@ export const tools: ToolDefinition[] = [
   {
     name: "bulk_create_events",
     description:
-      "⚠️ BULK WRITE — Bulk create multiple events (shifts) with automatic Swiss break calculation and optional auto-creation of event functions. " +
+      "⚠️ BULK WRITE — Bulk create multiple events (shifts) with optional automatic break calculation and auto-creation of event functions. " +
       "ALWAYS use dry_run=true first to preview, and confirm with the user before creating. " +
       "IMPORTANT: Events without event functions are INVISIBLE in StaffCloud's staffing UI. " +
-      "ALWAYS set default_function_id (use list_functions to find IDs, e.g. 3=Promoter) to auto-create event functions with each event. " +
+      "ALWAYS set default_function_id (use list_functions to find IDs) to auto-create event functions with each event. " +
       "Only omit default_function_id if you will IMMEDIATELY call bulk_create_event_functions afterwards. " +
-      "Applies Swiss Arbeitsgesetz (ArG Art. 15) break rules automatically: >5.5h → 15min, >7h → 30min, >9h → 60min. " +
+      "When STAFFCLOUD_BREAK_RULES=swiss, applies ArG Art. 15 break rules: >5.5h → 15min, >7h → 30min, >9h → 60min. " +
       "Each event needs: project_id, name, date, start_time, and either end_time or duration_hours. " +
       "IMPORTANT: planner_id is REQUIRED by the API. Either set default_planner_id or include planner_id on each event. " +
       "If the user hasn't specified a planner, call list_planners first and ask them which planner to use. " +
@@ -591,7 +588,7 @@ export async function handle(
   ctx: ToolContext
 ): Promise<string | null> {
   if (!TOOL_NAMES.has(name)) return null;
-  const { client, descriptionField, defaultPlannerId } = ctx;
+  const { client, descriptionField, defaultPlannerId, phoneFormat, breakRules } = ctx;
 
   switch (name) {
     // ── Event Functions ──
@@ -676,11 +673,11 @@ export async function handle(
     }
     case "create_contact": {
       const v = validate(z.object({ data: zData }), args, name);
-      return formatResult(await client.createContact(autoFormatPhones(v.data)));
+      return formatResult(await client.createContact(autoFormatPhones(v.data, phoneFormat)));
     }
     case "update_contact": {
       const v = validate(z.object({ id: zId, data: zData }), args, name);
-      return formatResult(await client.updateContact(v.id, autoFormatPhones(v.data)));
+      return formatResult(await client.updateContact(v.id, autoFormatPhones(v.data, phoneFormat)));
     }
     case "delete_contact": {
       const v = validate(z.object({ id: zId }), args, name);
@@ -770,6 +767,7 @@ export async function handle(
       return formatResult(await bulkCreateEvents(client, {
         ...v,
         descriptionField,
+        breakRules,
       }));
     }
     case "bulk_create_event_functions": {
