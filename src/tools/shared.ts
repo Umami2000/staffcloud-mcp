@@ -57,6 +57,9 @@ export function buildParams(args: Record<string, unknown>): QueryParams {
       const eqIdx = part.indexOf("=");
       if (eqIdx > 0) {
         const key = part.substring(0, eqIdx);
+        // Block filters on PII fields to prevent boolean oracle attacks
+        // (e.g. "email=~john" could be used to infer email addresses)
+        if (SENSITIVE_FIELDS.has(key)) continue;
         const value = part.substring(eqIdx + 1);
         params[key] = value;
       }
@@ -239,8 +242,10 @@ export async function resolveQualifications(
 // ─── Phone Auto-Formatting ──────────────────────────────────────
 
 export function autoFormatPhones(
-  data: Record<string, unknown>
+  data: Record<string, unknown>,
+  phoneFormat: "swiss" | "none" = "none"
 ): Record<string, unknown> {
+  if (phoneFormat !== "swiss") return data; // no formatting unless explicitly Swiss
   const phoneFields = ["mobile", "phone", "telephone", "_dyn_attr_20"];
   const result = { ...data };
   for (const field of phoneFields) {

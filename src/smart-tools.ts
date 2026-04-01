@@ -53,6 +53,62 @@ function parseHours(start: string, end: string): number {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyRecord = Record<string, any>;
 
+// ─── Busy Date Helpers ─────────────────────────────────────────
+
+/** Find the first busy date overlapping an event's time range for an employee */
+function findOverlappingBusy(
+  busyDates: AnyRecord[] | undefined,
+  eventStart: string,
+  eventEnd: string,
+): { type: string; description?: string } | null {
+  if (!busyDates || busyDates.length === 0) return null;
+  const eStart = new Date(eventStart).getTime();
+  const eEnd = new Date(eventEnd).getTime();
+  for (const b of busyDates) {
+    const bStart = new Date(b.start as string).getTime();
+    const bEnd = new Date(b.end as string).getTime();
+    if (bStart <= eEnd && bEnd >= eStart) {
+      const hit: { type: string; description?: string } = { type: b.type as string };
+      if (b.description) hit.description = b.description as string;
+      return hit;
+    }
+  }
+  return null;
+}
+
+/**
+ * Fetch busy dates that overlap a date range.
+ *
+ * The /busy-dates endpoint does NOT support <= or >= operators on start/end
+ * (they silently return []). However, strict > works for server-side
+ * pre-filtering. We use start=>dayBefore to narrow results, then do a
+ * precise overlap check client-side.
+ */
+async function fetchBusyDatesForRange(
+  client: StaffCloudClient,
+  rangeStart: string,
+  rangeEnd: string,
+  fields = "id,employee_id,start,end,type",
+): Promise<AnyRecord[]> {
+  // Server-side: fetch only busy dates starting from the day before rangeStart
+  // (strict > excludes the boundary, so offset by 1 day to include it)
+  const d = new Date(`${rangeStart}T00:00:00`);
+  d.setDate(d.getDate() - 1);
+  const filterDate = fmtDate(d);
+
+  const params: QueryParams = { fields, start: `>${filterDate}` };
+  const results = (await client.listBusyDates(params)) as AnyRecord[];
+
+  // Client-side: precise overlap check
+  const lo = new Date(`${rangeStart} 00:00:00`).getTime();
+  const hi = new Date(`${rangeEnd} 23:59:59`).getTime();
+  return results.filter((b) => {
+    const bStart = new Date(b.start as string).getTime();
+    const bEnd = new Date(b.end as string).getTime();
+    return bStart <= hi && bEnd >= lo;
+  });
+}
+
 // ─── Phone Number Formatting ────────────────────────────────────
 
 /**
@@ -230,6 +286,24 @@ export async function getStaffSchedule(
     }
   }
 
+  // Fetch busy dates for the date range covered by the events
+  // Build a map: employee_id → array of busy dates overlapping these events
+  const busyByEmployee = new Map<number, AnyRecord[]>();
+  if (events.length > 0) {
+    const eventDates = events.map((e) => (e.start as string).split(" ")[0]!).sort();
+    const rangeStart = eventDates[0]!;
+    const rangeEnd = eventDates[eventDates.length - 1]!;
+    const busyDates = await fetchBusyDatesForRange(
+      client, rangeStart, rangeEnd, "id,employee_id,start,end,type,description"
+    );
+    for (const b of busyDates) {
+      const eid = b.employee_id as number;
+      let arr = busyByEmployee.get(eid);
+      if (!arr) { arr = []; busyByEmployee.set(eid, arr); }
+      arr.push(b);
+    }
+  }
+
   // Build event map for quick lookup
   const eventMap: Record<number, AnyRecord> = {};
   for (const e of events) {
@@ -249,7 +323,7 @@ export async function getStaffSchedule(
           ef?.start || event.start,
           ef?.end || event.end
         );
-        return {
+        const shiftEntry: AnyRecord = {
           assignment_id: a.id,
           date: (event.start as string)?.split(" ")[0],
           event_id: event.id,
@@ -264,6 +338,14 @@ export async function getStaffSchedule(
           status: a.status,
           status_label: ASSIGNMENT_STATUS_LABELS[a.status as number] || `status_${a.status}`,
         };
+        const busyHit = findOverlappingBusy(
+          busyByEmployee.get(a.employee_id as number),
+          event.start as string, event.end as string,
+        );
+        if (busyHit) {
+          shiftEntry.busy_date = busyHit;
+        }
+        return shiftEntry;
       })
       .filter(Boolean)
       .sort((a, b) => (a!.start as string).localeCompare(b!.start as string));
@@ -317,6 +399,13 @@ export async function getStaffSchedule(
           entry.mobile = emp?.mobile;
           entry.email = emp?.email;
         }
+        const busyHit = findOverlappingBusy(
+          busyByEmployee.get(a.employee_id as number),
+          event.start as string, event.end as string,
+        );
+        if (busyHit) {
+          entry.busy_date = busyHit;
+        }
         return entry;
       }),
       headcount: eventAssignments.length,
@@ -364,11 +453,7 @@ export async function findAvailableStaff(
 
   const [employees, busyDates, events] = await Promise.all([
     client.listEmployees(empParams) as Promise<AnyRecord[]>,
-    client.listBusyDates({
-      start: `<=${args.date_end} 23:59:59`,
-      end: `>=${args.date_start} 00:00:00`,
-      fields: "id,employee_id,start,end,type",
-    }) as Promise<AnyRecord[]>,
+    fetchBusyDatesForRange(client, args.date_start, args.date_end),
     client.listEvents({
       start: `>=${args.date_start} 00:00:00`,
       end: `<=${args.date_end} 23:59:59`,
@@ -390,11 +475,14 @@ export async function findAvailableStaff(
 
   const employeeIds = new Set(filtered.map((e) => e.id as number));
 
-  const busyEmployeeIds = new Set(
-    busyDates
-      .filter((b) => employeeIds.has(b.employee_id as number))
-      .map((b) => b.employee_id as number)
-  );
+  // Build a map of employee_id → busy date type for annotation
+  const busyEmployeeMap = new Map<number, string>();
+  for (const b of busyDates) {
+    const eid = b.employee_id as number;
+    if (employeeIds.has(eid) && !busyEmployeeMap.has(eid)) {
+      busyEmployeeMap.set(eid, b.type as string);
+    }
+  }
 
   // 4. Fetch assignments (depends on events from step 3)
   const assignedEmployeeIds = new Set<number>();
@@ -433,7 +521,8 @@ export async function findAvailableStaff(
 
     if (assignedEmployeeIds.has(id)) {
       alreadyAssigned.push(summary);
-    } else if (busyEmployeeIds.has(id)) {
+    } else if (busyEmployeeMap.has(id)) {
+      summary.busy_type = busyEmployeeMap.get(id);
       busy.push(summary);
     } else {
       available.push(summary);
@@ -836,7 +925,8 @@ export interface CreateShiftArgs {
   quantity?: number; // positions needed (default 1)
   description?: string; // event description
   activate?: boolean; // activate event after creation (default true)
-  descriptionField?: string; // field name for description (default: dynamic_field_51)
+  descriptionField?: string; // field name for description (tenant-specific)
+  breakRules?: "swiss" | "none"; // break rule set: "swiss" = ArG Art. 15, "none" = no auto-breaks
 }
 
 /**
@@ -965,8 +1055,8 @@ export async function createShift(
       law_reference: "User override",
     };
     breakApplied = true;
-  } else if (!args.skip_break) {
-    // Auto-calculate per Swiss law
+  } else if (!args.skip_break && args.breakRules === "swiss") {
+    // Auto-calculate per Swiss law (only when breakRules is "swiss")
     breakInfo = calculateSwissBreak(args.date, args.start_time, endTime);
     if (breakInfo) {
       breakApplied = true;
@@ -988,8 +1078,8 @@ export async function createShift(
     eventData.break_end = breakInfo.break_end;
   }
 
-  if (args.description) {
-    eventData[args.descriptionField || "dynamic_field_51"] = args.description;
+  if (args.description && args.descriptionField) {
+    eventData[args.descriptionField] = args.description;
   }
 
   const event = (await client.createEvent(eventData)) as AnyRecord;
@@ -1295,6 +1385,7 @@ export interface BulkCreateEventsArgs {
   default_function_id?: number;
   default_quantity?: number;
   descriptionField?: string;
+  breakRules?: "swiss" | "none";
   dry_run?: boolean;
 }
 
@@ -1327,7 +1418,7 @@ export async function bulkCreateEvents(
       }
 
       const breakCalc =
-        !e.skip_break && endTime
+        !e.skip_break && args.breakRules === "swiss" && endTime
           ? calculateSwissBreak(e.date, e.start_time, endTime)
           : null;
 
@@ -1408,7 +1499,7 @@ export async function bulkCreateEvents(
           ),
           law_reference: "User override",
         };
-      } else if (!e.skip_break) {
+      } else if (!e.skip_break && args.breakRules === "swiss") {
         breakInfo = calculateSwissBreak(e.date, e.start_time, endTime);
       }
 
@@ -1434,8 +1525,8 @@ export async function bulkCreateEvents(
         eventData.break_end = breakInfo.break_end;
       }
 
-      if (e.description) {
-        eventData[args.descriptionField || "dynamic_field_51"] = e.description;
+      if (e.description && args.descriptionField) {
+        eventData[args.descriptionField] = e.description;
       }
 
       const created = (await client.createEvent(eventData)) as AnyRecord;
@@ -2008,11 +2099,7 @@ export async function findReplacement(
           ? "id,firstname,lastname,city,zip,qualifications,mobile,email"
           : "id,firstname,lastname,city,zip,qualifications",
       }) as Promise<AnyRecord[]>,
-      client.listBusyDates({
-        start: `<=${eventDate} 23:59:59`,
-        end: `>=${eventDate} 00:00:00`,
-        fields: "id,employee_id",
-      }) as Promise<AnyRecord[]>,
+      fetchBusyDatesForRange(client, eventDate, eventDate, "id,employee_id"),
       client.listEvents({
         start: `>=${eventDate} 00:00:00`,
         end: `<${nextDay} 00:00:00`,

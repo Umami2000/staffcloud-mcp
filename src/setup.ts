@@ -214,6 +214,136 @@ async function runSmokeTest(
   }
 }
 
+// ─── Tenant Auto-Detection ──────────────────────────────────────
+
+interface TenantConfig {
+  descriptionField: string;
+  breakRules: "swiss" | "none";
+  phoneFormat: "swiss" | "none";
+  countryName: string;
+  collections: { name: string; id: number }[];
+}
+
+/**
+ * Auto-detect tenant-specific configuration by querying the API.
+ *
+ * 1. Fetches attributes to find the event description dynamic field
+ * 2. Fetches settings / country collections to detect region
+ * 3. Returns recommended settings
+ */
+async function detectTenantConfig(
+  apiUrl: string,
+  apiKey: string
+): Promise<TenantConfig> {
+  const base = apiUrl.replace(/\/$/, "");
+  const headers = { Authorization: `Bearer ${apiKey}`, Accept: "application/json" };
+
+  const config: TenantConfig = {
+    descriptionField: "",
+    breakRules: "none",
+    phoneFormat: "none",
+    countryName: "",
+    collections: [],
+  };
+
+  // 1. Fetch attributes to find event description field
+  // StaffCloud attributes have entity_id: 1=Project, 2=Event, 3=Contact, 4=Client, 6=Employee
+  try {
+    const res = await fetch(`${base}/attributes`, { headers });
+    if (res.ok) {
+      const attrs = (await res.json()) as {
+        id: number;
+        name: string | null;
+        entity_id: number;
+        type_id: number;
+      }[];
+
+      // Look for an event (entity_id=2) attribute with "description" in its name
+      const descLabels = ["description", "beschreibung", "description de l'événement", "descrizione", "beschrieb"];
+      const eventAttrs = attrs.filter((a) => a.entity_id === 2);
+
+      for (const attr of eventAttrs) {
+        const name = (attr.name || "").toLowerCase();
+        if (descLabels.some((d) => name.includes(d))) {
+          config.descriptionField = `dynamic_field_${attr.id}`;
+          break;
+        }
+      }
+
+      // If no exact match, use the first event text-type attribute as fallback
+      // type_id 4 = textarea/text in StaffCloud
+      if (!config.descriptionField) {
+        const textAttr = eventAttrs.find((a) => a.type_id === 4);
+        if (textAttr) {
+          config.descriptionField = `dynamic_field_${textAttr.id}`;
+        }
+      }
+    }
+  } catch {
+    // Non-fatal — description field will be empty
+  }
+
+  // 2. Fetch collections to detect what reference data exists
+  try {
+    const res = await fetch(`${base}/collections?fields=id,name`, { headers });
+    if (res.ok) {
+      const collections = (await res.json()) as { id: number; name: string }[];
+      config.collections = collections.map((c) => ({ id: c.id, name: c.name }));
+    }
+  } catch {
+    // Non-fatal
+  }
+
+  // 3. Detect country/region from settings
+  // Settings are returned as an array of {identifier, value, name, ...} objects
+  try {
+    const res = await fetch(`${base}/settings`, { headers });
+    if (res.ok) {
+      const settings = (await res.json()) as { identifier?: string; value?: unknown; name?: string }[];
+
+      if (Array.isArray(settings)) {
+        // Build lookup by identifier
+        const settingsMap = new Map(
+          settings.map((s) => [s.identifier || "", s.value])
+        );
+
+        // Check currency (most reliable indicator)
+        const currency = String(settingsMap.get("i18n_currencyFormat") || "").toLowerCase();
+
+        if (currency === "chf") {
+          config.breakRules = "swiss";
+          config.phoneFormat = "swiss";
+          config.countryName = "Switzerland";
+        } else if (currency === "eur") {
+          config.countryName = "EU (EUR currency)";
+        } else if (currency === "gpd") {
+          config.countryName = "UK (GBP currency)";
+        } else if (currency) {
+          config.countryName = `${currency.toUpperCase()} region`;
+        }
+      }
+    }
+  } catch {
+    // Non-fatal
+  }
+
+  // 4. If settings didn't reveal the country, try to infer from URL domain
+  if (!config.countryName) {
+    try {
+      const host = new URL(apiUrl).hostname.toLowerCase();
+      if (host.endsWith(".ch") || host.includes("swiss") || host.includes("suisse")) {
+        config.breakRules = "swiss";
+        config.phoneFormat = "swiss";
+        config.countryName = "Switzerland (inferred from URL)";
+      }
+    } catch {
+      // Non-fatal
+    }
+  }
+
+  return config;
+}
+
 // ─── Config Reading & Detection ─────────────────────────────────
 
 interface McpConfig {
@@ -290,6 +420,7 @@ function writeConfig(
   projectDir?: string,
   defaultPlannerId?: string,
   modules?: string,
+  options?: { descriptionField?: string; breakRules?: string; phoneFormat?: string },
 ): string {
   const env: Record<string, string> = {
     STAFFCLOUD_API_URL: apiUrl,
@@ -300,6 +431,15 @@ function writeConfig(
   }
   if (modules && modules !== "core") {
     env.STAFFCLOUD_MODULES = modules;
+  }
+  if (options?.descriptionField) {
+    env.STAFFCLOUD_DESCRIPTION_FIELD = options.descriptionField;
+  }
+  if (options?.breakRules && options.breakRules !== "none") {
+    env.STAFFCLOUD_BREAK_RULES = options.breakRules;
+  }
+  if (options?.phoneFormat && options.phoneFormat !== "none") {
+    env.STAFFCLOUD_PHONE_FORMAT = options.phoneFormat;
   }
   // Resolve absolute path to dist/index.js (works from any clone location)
   const distDir = path.dirname(fileURLToPath(import.meta.url));
@@ -348,7 +488,10 @@ function writeConfig(
           !l.startsWith("STAFFCLOUD_API_URL=") &&
           !l.startsWith("STAFFCLOUD_API_KEY=") &&
           !l.startsWith("STAFFCLOUD_DEFAULT_PLANNER_ID=") &&
-          !l.startsWith("STAFFCLOUD_MODULES=")
+          !l.startsWith("STAFFCLOUD_MODULES=") &&
+          !l.startsWith("STAFFCLOUD_DESCRIPTION_FIELD=") &&
+          !l.startsWith("STAFFCLOUD_BREAK_RULES=") &&
+          !l.startsWith("STAFFCLOUD_PHONE_FORMAT=")
       )
       .join("\n");
     if (!content.endsWith("\n")) content += "\n";
@@ -360,6 +503,15 @@ function writeConfig(
   }
   if (modules && modules !== "core") {
     content += `STAFFCLOUD_MODULES="${modules}"\n`;
+  }
+  if (options?.descriptionField) {
+    content += `STAFFCLOUD_DESCRIPTION_FIELD="${options.descriptionField}"\n`;
+  }
+  if (options?.breakRules && options.breakRules !== "none") {
+    content += `STAFFCLOUD_BREAK_RULES="${options.breakRules}"\n`;
+  }
+  if (options?.phoneFormat && options.phoneFormat !== "none") {
+    content += `STAFFCLOUD_PHONE_FORMAT="${options.phoneFormat}"\n`;
   }
   fs.writeFileSync(envPath, content);
   restrictPermissions(envPath);
@@ -599,8 +751,80 @@ async function main() {
       console.log("  ✓ Connection successful!\n");
     }
 
-    // ── Step 4: Default Planner ──
-    printStep(4, "Default Planner");
+    // ── Step 4: Auto-detect tenant config ──
+    printStep(4, "Detecting tenant configuration");
+    console.log("  Querying your StaffCloud instance to auto-detect settings...\n");
+
+    let tenantDescField = "";
+    let tenantBreakRules = "none";
+    let tenantPhoneFormat = "none";
+
+    try {
+      const tenantConfig = await detectTenantConfig(apiUrl, apiKey);
+
+      // Description field
+      if (tenantConfig.descriptionField) {
+        tenantDescField = tenantConfig.descriptionField;
+        console.log(`  ✓ Event description field: ${tenantConfig.descriptionField}`);
+      } else {
+        console.log("  ⚠ Could not auto-detect event description field.");
+        console.log("    You can set it manually later via STAFFCLOUD_DESCRIPTION_FIELD.");
+      }
+
+      // Country / region
+      if (tenantConfig.countryName) {
+        console.log(`  ✓ Detected region: ${tenantConfig.countryName}`);
+        if (tenantConfig.breakRules === "swiss") {
+          console.log("    → Swiss labor law breaks (ArG Art. 15) will be enabled");
+          console.log("    → Swiss phone formatting (+41) will be enabled");
+        }
+        tenantBreakRules = tenantConfig.breakRules;
+        tenantPhoneFormat = tenantConfig.phoneFormat;
+      } else {
+        console.log("  ℹ Could not detect country from settings.");
+      }
+
+      // Collections
+      if (tenantConfig.collections.length > 0) {
+        console.log(`  ✓ Found ${tenantConfig.collections.length} collections (reference data)`);
+      }
+
+      console.log("");
+
+      // Let user confirm/override region if not detected
+      if (!tenantConfig.countryName) {
+        const isCH = (await ask(rl, "  Is your company based in Switzerland? (y/N): ")).trim().toLowerCase();
+        if (isCH === "y") {
+          tenantBreakRules = "swiss";
+          tenantPhoneFormat = "swiss";
+          console.log("  → Swiss labor law breaks and phone formatting enabled.\n");
+        } else {
+          console.log("  → No automatic break rules or phone formatting.\n");
+        }
+      } else if (tenantConfig.breakRules === "swiss") {
+        // Detected Swiss — allow override
+        const override = (await ask(rl, "  Disable Swiss-specific features? (y/N): ")).trim().toLowerCase();
+        if (override === "y") {
+          tenantBreakRules = "none";
+          tenantPhoneFormat = "none";
+          console.log("  → Swiss features disabled.\n");
+        }
+      }
+
+      // Let user override description field if auto-detected or set manually
+      if (!tenantDescField) {
+        const manualField = (await ask(rl, "  Event description field (leave blank to skip): ")).trim();
+        if (manualField) {
+          tenantDescField = manualField.startsWith("dynamic_field_") ? manualField : `dynamic_field_${manualField}`;
+          console.log(`  → Description field set to: ${tenantDescField}\n`);
+        }
+      }
+    } catch {
+      console.log("  ⚠ Auto-detection failed. You can configure settings manually later.\n");
+    }
+
+    // ── Step 5: Default Planner ──
+    printStep(5, "Default Planner");
     console.log("  Fetching planners from your StaffCloud instance...\n");
 
     let defaultPlannerId = "";
@@ -641,8 +865,8 @@ async function main() {
       console.log("  Could not fetch planners. You can set one later via STAFFCLOUD_DEFAULT_PLANNER_ID.\n");
     }
 
-    // ── Step 5: Module Selection ──
-    printStep(5, "Tool Modules");
+    // ── Step 6: Module Selection ──
+    printStep(6, "Tool Modules");
     console.log("  staffcloud-mcp organizes tools into modules. Choose which to enable.\n");
     console.log("  Available modules:\n");
     console.log("    core      — 27 tools: employees, projects, events, assignments, scheduling");
@@ -681,8 +905,8 @@ async function main() {
     }
     console.log(`\n  ✓ Modules: ${selectedModules}\n`);
 
-    // ── Step 6: Save config ──
-    printStep(6, "Save configuration");
+    // ── Step 7: Save config ──
+    printStep(7, "Save configuration");
     console.log("  Note: Sensitive employee data (email, phone, address, birthday) is always");
     console.log("  protected. The AI only sees planning-safe fields.\n");
     console.log("  Where should the MCP config be saved?\n");
@@ -696,6 +920,12 @@ async function main() {
       choice = (await ask(rl, "  Choice (1-4): ")).trim();
     }
 
+    const tenantOptions = {
+      descriptionField: tenantDescField,
+      breakRules: tenantBreakRules,
+      phoneFormat: tenantPhoneFormat,
+    };
+
     if (choice === "4") {
       console.log("\n  Add this to your MCP settings:\n");
       const printEnv: Record<string, string> = {
@@ -707,6 +937,15 @@ async function main() {
       }
       if (selectedModules !== "core") {
         printEnv.STAFFCLOUD_MODULES = selectedModules;
+      }
+      if (tenantDescField) {
+        printEnv.STAFFCLOUD_DESCRIPTION_FIELD = tenantDescField;
+      }
+      if (tenantBreakRules !== "none") {
+        printEnv.STAFFCLOUD_BREAK_RULES = tenantBreakRules;
+      }
+      if (tenantPhoneFormat !== "none") {
+        printEnv.STAFFCLOUD_PHONE_FORMAT = tenantPhoneFormat;
       }
       const distDir = path.dirname(fileURLToPath(import.meta.url));
       const indexPath = path.join(distDir, "index.js");
@@ -734,7 +973,7 @@ async function main() {
       };
       const savedPath = writeConfig(
         apiUrl, apiKey, targetMap[choice as "1" | "2" | "3"],
-        undefined, defaultPlannerId, selectedModules
+        undefined, defaultPlannerId, selectedModules, tenantOptions
       );
       console.log(`\n  ✓ Config saved to: ${savedPath}`);
       console.log(`  ✓ File permissions restricted to owner-only (0600)\n`);

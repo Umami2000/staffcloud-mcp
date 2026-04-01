@@ -89,15 +89,15 @@ export const tools: ToolDefinition[] = [
     name: "list_collection_values",
     description:
       "List values from a StaffCloud collection (reference data). " +
-      "Key collections: 5=Qualifications, 6=Functions, 7=Locations, 8=Countries, 9=Gender, " +
-      "12=Wage profiles, 13=Civil Status, 19=Kanton, 25=Sprachregion. " +
-      "Example: collection_id=19 to list all Swiss cantons with their IDs.",
+      "Collection IDs are tenant-specific — use list_attributes or get_field_definitions to discover " +
+      "which collection_id maps to which data (e.g. countries, gender, regions, qualifications). " +
+      "Example: find the collection_id for countries, then list values to get country IDs for your tenant.",
     inputSchema: {
       type: "object" as const,
       properties: {
         collection_id: {
           type: "number",
-          description: "Collection ID. Key IDs: 7=Locations, 36=Counties/Kantone.",
+          description: "Collection ID. Use list_attributes or get_field_definitions to discover collection IDs for your tenant.",
         },
         fields: {
           type: "string",
