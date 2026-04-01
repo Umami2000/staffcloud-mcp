@@ -53,6 +53,52 @@ function parseHours(start: string, end: string): number {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyRecord = Record<string, any>;
 
+// ─── Busy Date Helpers ─────────────────────────────────────────
+
+/** Find the first busy date overlapping an event's time range for an employee */
+function findOverlappingBusy(
+  busyDates: AnyRecord[] | undefined,
+  eventStart: string,
+  eventEnd: string,
+): { type: string; description?: string } | null {
+  if (!busyDates || busyDates.length === 0) return null;
+  const eStart = new Date(eventStart).getTime();
+  const eEnd = new Date(eventEnd).getTime();
+  for (const b of busyDates) {
+    const bStart = new Date(b.start as string).getTime();
+    const bEnd = new Date(b.end as string).getTime();
+    if (bStart <= eEnd && bEnd >= eStart) {
+      const hit: { type: string; description?: string } = { type: b.type as string };
+      if (b.description) hit.description = b.description as string;
+      return hit;
+    }
+  }
+  return null;
+}
+
+/**
+ * Fetch busy dates that overlap a date range, with client-side filtering.
+ *
+ * The /busy-dates endpoint does NOT support comparison operators (<=, >=)
+ * on start/end fields — unlike /events. Passing them silently returns [].
+ * We must fetch all busy dates and filter in JS.
+ */
+async function fetchBusyDatesForRange(
+  client: StaffCloudClient,
+  rangeStart: string,
+  rangeEnd: string,
+  fields = "id,employee_id,start,end,type",
+): Promise<AnyRecord[]> {
+  const all = (await client.listBusyDates({ fields })) as AnyRecord[];
+  const lo = new Date(`${rangeStart} 00:00:00`).getTime();
+  const hi = new Date(`${rangeEnd} 23:59:59`).getTime();
+  return all.filter((b) => {
+    const bStart = new Date(b.start as string).getTime();
+    const bEnd = new Date(b.end as string).getTime();
+    return bStart <= hi && bEnd >= lo;
+  });
+}
+
 // ─── Phone Number Formatting ────────────────────────────────────
 
 /**
@@ -230,6 +276,24 @@ export async function getStaffSchedule(
     }
   }
 
+  // Fetch busy dates for the date range covered by the events
+  // Build a map: employee_id → array of busy dates overlapping these events
+  const busyByEmployee = new Map<number, AnyRecord[]>();
+  if (events.length > 0) {
+    const eventDates = events.map((e) => (e.start as string).split(" ")[0]!).sort();
+    const rangeStart = eventDates[0]!;
+    const rangeEnd = eventDates[eventDates.length - 1]!;
+    const busyDates = await fetchBusyDatesForRange(
+      client, rangeStart, rangeEnd, "id,employee_id,start,end,type,description"
+    );
+    for (const b of busyDates) {
+      const eid = b.employee_id as number;
+      let arr = busyByEmployee.get(eid);
+      if (!arr) { arr = []; busyByEmployee.set(eid, arr); }
+      arr.push(b);
+    }
+  }
+
   // Build event map for quick lookup
   const eventMap: Record<number, AnyRecord> = {};
   for (const e of events) {
@@ -249,7 +313,7 @@ export async function getStaffSchedule(
           ef?.start || event.start,
           ef?.end || event.end
         );
-        return {
+        const shiftEntry: AnyRecord = {
           assignment_id: a.id,
           date: (event.start as string)?.split(" ")[0],
           event_id: event.id,
@@ -264,6 +328,14 @@ export async function getStaffSchedule(
           status: a.status,
           status_label: ASSIGNMENT_STATUS_LABELS[a.status as number] || `status_${a.status}`,
         };
+        const busyHit = findOverlappingBusy(
+          busyByEmployee.get(a.employee_id as number),
+          event.start as string, event.end as string,
+        );
+        if (busyHit) {
+          shiftEntry.busy_date = busyHit;
+        }
+        return shiftEntry;
       })
       .filter(Boolean)
       .sort((a, b) => (a!.start as string).localeCompare(b!.start as string));
@@ -317,6 +389,13 @@ export async function getStaffSchedule(
           entry.mobile = emp?.mobile;
           entry.email = emp?.email;
         }
+        const busyHit = findOverlappingBusy(
+          busyByEmployee.get(a.employee_id as number),
+          event.start as string, event.end as string,
+        );
+        if (busyHit) {
+          entry.busy_date = busyHit;
+        }
         return entry;
       }),
       headcount: eventAssignments.length,
@@ -364,11 +443,7 @@ export async function findAvailableStaff(
 
   const [employees, busyDates, events] = await Promise.all([
     client.listEmployees(empParams) as Promise<AnyRecord[]>,
-    client.listBusyDates({
-      start: `<=${args.date_end} 23:59:59`,
-      end: `>=${args.date_start} 00:00:00`,
-      fields: "id,employee_id,start,end,type",
-    }) as Promise<AnyRecord[]>,
+    fetchBusyDatesForRange(client, args.date_start, args.date_end),
     client.listEvents({
       start: `>=${args.date_start} 00:00:00`,
       end: `<=${args.date_end} 23:59:59`,
@@ -390,11 +465,14 @@ export async function findAvailableStaff(
 
   const employeeIds = new Set(filtered.map((e) => e.id as number));
 
-  const busyEmployeeIds = new Set(
-    busyDates
-      .filter((b) => employeeIds.has(b.employee_id as number))
-      .map((b) => b.employee_id as number)
-  );
+  // Build a map of employee_id → busy date type for annotation
+  const busyEmployeeMap = new Map<number, string>();
+  for (const b of busyDates) {
+    const eid = b.employee_id as number;
+    if (employeeIds.has(eid) && !busyEmployeeMap.has(eid)) {
+      busyEmployeeMap.set(eid, b.type as string);
+    }
+  }
 
   // 4. Fetch assignments (depends on events from step 3)
   const assignedEmployeeIds = new Set<number>();
@@ -433,7 +511,8 @@ export async function findAvailableStaff(
 
     if (assignedEmployeeIds.has(id)) {
       alreadyAssigned.push(summary);
-    } else if (busyEmployeeIds.has(id)) {
+    } else if (busyEmployeeMap.has(id)) {
+      summary.busy_type = busyEmployeeMap.get(id);
       busy.push(summary);
     } else {
       available.push(summary);
@@ -2010,11 +2089,7 @@ export async function findReplacement(
           ? "id,firstname,lastname,city,zip,qualifications,mobile,email"
           : "id,firstname,lastname,city,zip,qualifications",
       }) as Promise<AnyRecord[]>,
-      client.listBusyDates({
-        start: `<=${eventDate} 23:59:59`,
-        end: `>=${eventDate} 00:00:00`,
-        fields: "id,employee_id",
-      }) as Promise<AnyRecord[]>,
+      fetchBusyDatesForRange(client, eventDate, eventDate, "id,employee_id"),
       client.listEvents({
         start: `>=${eventDate} 00:00:00`,
         end: `<${nextDay} 00:00:00`,
