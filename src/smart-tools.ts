@@ -77,11 +77,12 @@ function findOverlappingBusy(
 }
 
 /**
- * Fetch busy dates that overlap a date range, with client-side filtering.
+ * Fetch busy dates that overlap a date range.
  *
- * The /busy-dates endpoint does NOT support comparison operators (<=, >=)
- * on start/end fields — unlike /events. Passing them silently returns [].
- * We must fetch all busy dates and filter in JS.
+ * The /busy-dates endpoint does NOT support <= or >= operators on start/end
+ * (they silently return []). However, strict > works for server-side
+ * pre-filtering. We use start=>dayBefore to narrow results, then do a
+ * precise overlap check client-side.
  */
 async function fetchBusyDatesForRange(
   client: StaffCloudClient,
@@ -89,10 +90,19 @@ async function fetchBusyDatesForRange(
   rangeEnd: string,
   fields = "id,employee_id,start,end,type",
 ): Promise<AnyRecord[]> {
-  const all = (await client.listBusyDates({ fields })) as AnyRecord[];
+  // Server-side: fetch only busy dates starting from the day before rangeStart
+  // (strict > excludes the boundary, so offset by 1 day to include it)
+  const d = new Date(`${rangeStart}T00:00:00`);
+  d.setDate(d.getDate() - 1);
+  const filterDate = fmtDate(d);
+
+  const params: QueryParams = { fields, start: `>${filterDate}` };
+  const results = (await client.listBusyDates(params)) as AnyRecord[];
+
+  // Client-side: precise overlap check
   const lo = new Date(`${rangeStart} 00:00:00`).getTime();
   const hi = new Date(`${rangeEnd} 23:59:59`).getTime();
-  return all.filter((b) => {
+  return results.filter((b) => {
     const bStart = new Date(b.start as string).getTime();
     const bEnd = new Date(b.end as string).getTime();
     return bStart <= hi && bEnd >= lo;
