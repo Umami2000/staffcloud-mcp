@@ -129,7 +129,7 @@ const ctx: ToolContext = {
   client,
   descriptionField: DESCRIPTION_FIELD,
   defaultPlannerId: DEFAULT_PLANNER_ID,
-  piiAccess: false, // PII protection is always on — sensitive employee data is never exposed
+  piiAccess: true, // PII protection is always on — sensitive employee data is never exposed
 };
 
 // ─── Rate Limit Warning ───────────────────────────────────────

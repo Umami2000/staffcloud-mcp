@@ -1,0 +1,2480 @@
+{
+  "date": "2026-06-19",
+  "title": "Dreame new stores Juli 2026",
+  "client_id": 53,
+  "planner_id": 44,
+  "planner": "Marlene Brunner (id 44)",
+  "function_id": 19,
+  "wage_profile_id": 5,
+  "event_status": 2,
+  "schedule": "Thu/Fri 14:30-18:30 (no break); Sat per store with 30min break; dates Thu/Fri/Sat 2026-07-02..2026-12-31 (79/store)",
+  "sat_breaks": {
+    "09:30-18:00": "13:43-14:13",
+    "08:30-17:00": "12:30-13:00"
+  },
+  "totals": {
+    "locations": 6,
+    "projects": 6,
+    "events": 474,
+    "event_functions": 474
+  },
+  "stores": [
+    {
+      "code": "C012",
+      "name": "MEDIA MARKT BASEL",
+      "project_id": 6049,
+      "location_id": 2200,
+      "storeid": "CXY26010011",
+      "lang": "D-CH",
+      "sat": "09:30-18:00",
+      "event_count": 79,
+      "events": [
+        {
+          "name": "Do. 02. Juli",
+          "event_id": 58396,
+          "ef_id": 56957
+        },
+        {
+          "name": "Do. 16. Juli",
+          "event_id": 58397,
+          "ef_id": 56960
+        },
+        {
+          "name": "Do. 09. Juli",
+          "event_id": 58398,
+          "ef_id": 56959
+        },
+        {
+          "name": "Fr. 10. Juli",
+          "event_id": 58399,
+          "ef_id": 56958
+        },
+        {
+          "name": "Sa. 04. Juli",
+          "event_id": 58400,
+          "ef_id": 56981
+        },
+        {
+          "name": "Sa. 11. Juli",
+          "event_id": 58401,
+          "ef_id": 56962
+        },
+        {
+          "name": "Fr. 03. Juli",
+          "event_id": 58402,
+          "ef_id": 56961
+        },
+        {
+          "name": "Fr. 17. Juli",
+          "event_id": 58403,
+          "ef_id": 56963
+        },
+        {
+          "name": "Do. 23. Juli",
+          "event_id": 58404,
+          "ef_id": 56964
+        },
+        {
+          "name": "Sa. 18. Juli",
+          "event_id": 58405,
+          "ef_id": 56966
+        },
+        {
+          "name": "Fr. 24. Juli",
+          "event_id": 58406,
+          "ef_id": 56965
+        },
+        {
+          "name": "Sa. 25. Juli",
+          "event_id": 58407,
+          "ef_id": 56967
+        },
+        {
+          "name": "Fr. 31. Juli",
+          "event_id": 58408,
+          "ef_id": 56968
+        },
+        {
+          "name": "Do. 30. Juli",
+          "event_id": 58409,
+          "ef_id": 56969
+        },
+        {
+          "name": "Do. 06. Aug.",
+          "event_id": 58410,
+          "ef_id": 56970
+        },
+        {
+          "name": "Fr. 07. Aug.",
+          "event_id": 58411,
+          "ef_id": 56972
+        },
+        {
+          "name": "Sa. 01. Aug.",
+          "event_id": 58412,
+          "ef_id": 56971
+        },
+        {
+          "name": "Sa. 08. Aug.",
+          "event_id": 58413,
+          "ef_id": 56974
+        },
+        {
+          "name": "Do. 13. Aug.",
+          "event_id": 58414,
+          "ef_id": 56975
+        },
+        {
+          "name": "Fr. 14. Aug.",
+          "event_id": 58415,
+          "ef_id": 56973
+        },
+        {
+          "name": "Sa. 15. Aug.",
+          "event_id": 58416,
+          "ef_id": 56988
+        },
+        {
+          "name": "Do. 20. Aug.",
+          "event_id": 58417,
+          "ef_id": 56976
+        },
+        {
+          "name": "Sa. 22. Aug.",
+          "event_id": 58418,
+          "ef_id": 56977
+        },
+        {
+          "name": "Fr. 21. Aug.",
+          "event_id": 58419,
+          "ef_id": 56978
+        },
+        {
+          "name": "Fr. 28. Aug.",
+          "event_id": 58420,
+          "ef_id": 56979
+        },
+        {
+          "name": "Do. 27. Aug.",
+          "event_id": 58421,
+          "ef_id": 56980
+        },
+        {
+          "name": "Sa. 29. Aug.",
+          "event_id": 58422,
+          "ef_id": 56982
+        },
+        {
+          "name": "Do. 03. Sept.",
+          "event_id": 58423,
+          "ef_id": 56983
+        },
+        {
+          "name": "Fr. 04. Sept.",
+          "event_id": 58424,
+          "ef_id": 56984
+        },
+        {
+          "name": "Sa. 05. Sept.",
+          "event_id": 58425,
+          "ef_id": 56985
+        },
+        {
+          "name": "Do. 10. Sept.",
+          "event_id": 58426,
+          "ef_id": 56989
+        },
+        {
+          "name": "Sa. 12. Sept.",
+          "event_id": 58427,
+          "ef_id": 56986
+        },
+        {
+          "name": "Fr. 11. Sept.",
+          "event_id": 58428,
+          "ef_id": 56987
+        },
+        {
+          "name": "Do. 17. Sept.",
+          "event_id": 58429,
+          "ef_id": 56990
+        },
+        {
+          "name": "Fr. 18. Sept.",
+          "event_id": 58430,
+          "ef_id": 56991
+        },
+        {
+          "name": "Fr. 25. Sept.",
+          "event_id": 58431,
+          "ef_id": 56992
+        },
+        {
+          "name": "Sa. 19. Sept.",
+          "event_id": 58432,
+          "ef_id": 56993
+        },
+        {
+          "name": "Do. 24. Sept.",
+          "event_id": 58433,
+          "ef_id": 56994
+        },
+        {
+          "name": "Sa. 26. Sept.",
+          "event_id": 58434,
+          "ef_id": 56995
+        },
+        {
+          "name": "Fr. 02. Okt.",
+          "event_id": 58435,
+          "ef_id": 56996
+        },
+        {
+          "name": "Do. 01. Okt.",
+          "event_id": 58436,
+          "ef_id": 56997
+        },
+        {
+          "name": "Do. 08. Okt.",
+          "event_id": 58437,
+          "ef_id": 56998
+        },
+        {
+          "name": "Sa. 03. Okt.",
+          "event_id": 58438,
+          "ef_id": 56999
+        },
+        {
+          "name": "Fr. 09. Okt.",
+          "event_id": 58439,
+          "ef_id": 57001
+        },
+        {
+          "name": "Sa. 10. Okt.",
+          "event_id": 58440,
+          "ef_id": 57002
+        },
+        {
+          "name": "Do. 15. Okt.",
+          "event_id": 58441,
+          "ef_id": 57000
+        },
+        {
+          "name": "Sa. 17. Okt.",
+          "event_id": 58442,
+          "ef_id": 57003
+        },
+        {
+          "name": "Do. 22. Okt.",
+          "event_id": 58443,
+          "ef_id": 57004
+        },
+        {
+          "name": "Fr. 16. Okt.",
+          "event_id": 58444,
+          "ef_id": 57005
+        },
+        {
+          "name": "Sa. 24. Okt.",
+          "event_id": 58445,
+          "ef_id": 57006
+        },
+        {
+          "name": "Fr. 23. Okt.",
+          "event_id": 58446,
+          "ef_id": 57007
+        },
+        {
+          "name": "Do. 29. Okt.",
+          "event_id": 58447,
+          "ef_id": 57015
+        },
+        {
+          "name": "Fr. 30. Okt.",
+          "event_id": 58448,
+          "ef_id": 57008
+        },
+        {
+          "name": "Sa. 31. Okt.",
+          "event_id": 58449,
+          "ef_id": 57009
+        },
+        {
+          "name": "Do. 05. Nov.",
+          "event_id": 58450,
+          "ef_id": 57010
+        },
+        {
+          "name": "Fr. 06. Nov.",
+          "event_id": 58451,
+          "ef_id": 57011
+        },
+        {
+          "name": "Sa. 07. Nov.",
+          "event_id": 58452,
+          "ef_id": 57012
+        },
+        {
+          "name": "Fr. 13. Nov.",
+          "event_id": 58453,
+          "ef_id": 57014
+        },
+        {
+          "name": "Sa. 14. Nov.",
+          "event_id": 58454,
+          "ef_id": 57013
+        },
+        {
+          "name": "Do. 19. Nov.",
+          "event_id": 58455,
+          "ef_id": 57016
+        },
+        {
+          "name": "Do. 12. Nov.",
+          "event_id": 58456,
+          "ef_id": 57018
+        },
+        {
+          "name": "Fr. 20. Nov.",
+          "event_id": 58457,
+          "ef_id": 57017
+        },
+        {
+          "name": "Sa. 21. Nov.",
+          "event_id": 58458,
+          "ef_id": 57019
+        },
+        {
+          "name": "Do. 26. Nov.",
+          "event_id": 58459,
+          "ef_id": 57020
+        },
+        {
+          "name": "Fr. 27. Nov.",
+          "event_id": 58460,
+          "ef_id": 57021
+        },
+        {
+          "name": "Sa. 28. Nov.",
+          "event_id": 58461,
+          "ef_id": 57022
+        },
+        {
+          "name": "Do. 03. Dez.",
+          "event_id": 58462,
+          "ef_id": 57036
+        },
+        {
+          "name": "Fr. 04. Dez.",
+          "event_id": 58463,
+          "ef_id": 57023
+        },
+        {
+          "name": "Sa. 05. Dez.",
+          "event_id": 58464,
+          "ef_id": 57024
+        },
+        {
+          "name": "Do. 10. Dez.",
+          "event_id": 58465,
+          "ef_id": 57025
+        },
+        {
+          "name": "Fr. 11. Dez.",
+          "event_id": 58466,
+          "ef_id": 57026
+        },
+        {
+          "name": "Sa. 12. Dez.",
+          "event_id": 58467,
+          "ef_id": 57028
+        },
+        {
+          "name": "Do. 17. Dez.",
+          "event_id": 58468,
+          "ef_id": 57027
+        },
+        {
+          "name": "Fr. 18. Dez.",
+          "event_id": 58469,
+          "ef_id": 57029
+        },
+        {
+          "name": "Sa. 19. Dez.",
+          "event_id": 58470,
+          "ef_id": 57030
+        },
+        {
+          "name": "Fr. 25. Dez.",
+          "event_id": 58471,
+          "ef_id": 57033
+        },
+        {
+          "name": "Do. 24. Dez.",
+          "event_id": 58472,
+          "ef_id": 57032
+        },
+        {
+          "name": "Sa. 26. Dez.",
+          "event_id": 58473,
+          "ef_id": 57031
+        },
+        {
+          "name": "Do. 31. Dez.",
+          "event_id": 58474,
+          "ef_id": 57034
+        }
+      ]
+    },
+    {
+      "code": "C013",
+      "name": "MEDIA MARKT GENÈVE CAROUGE",
+      "project_id": 6050,
+      "location_id": 2201,
+      "storeid": "CXY26010012",
+      "lang": "FR-CH",
+      "sat": "09:30-18:00",
+      "event_count": 79,
+      "events": [
+        {
+          "name": "Do. 02. Juli",
+          "event_id": 58475,
+          "ef_id": 57035
+        },
+        {
+          "name": "Fr. 03. Juli",
+          "event_id": 58476,
+          "ef_id": 57038
+        },
+        {
+          "name": "Sa. 04. Juli",
+          "event_id": 58477,
+          "ef_id": 57037
+        },
+        {
+          "name": "Do. 09. Juli",
+          "event_id": 58478,
+          "ef_id": 57040
+        },
+        {
+          "name": "Fr. 10. Juli",
+          "event_id": 58479,
+          "ef_id": 57050
+        },
+        {
+          "name": "Sa. 11. Juli",
+          "event_id": 58480,
+          "ef_id": 57039
+        },
+        {
+          "name": "Do. 16. Juli",
+          "event_id": 58481,
+          "ef_id": 57041
+        },
+        {
+          "name": "Sa. 18. Juli",
+          "event_id": 58482,
+          "ef_id": 57043
+        },
+        {
+          "name": "Do. 23. Juli",
+          "event_id": 58483,
+          "ef_id": 57042
+        },
+        {
+          "name": "Fr. 24. Juli",
+          "event_id": 58484,
+          "ef_id": 57044
+        },
+        {
+          "name": "Sa. 25. Juli",
+          "event_id": 58485,
+          "ef_id": 57045
+        },
+        {
+          "name": "Fr. 17. Juli",
+          "event_id": 58486,
+          "ef_id": 57046
+        },
+        {
+          "name": "Do. 30. Juli",
+          "event_id": 58487,
+          "ef_id": 57048
+        },
+        {
+          "name": "Fr. 31. Juli",
+          "event_id": 58488,
+          "ef_id": 57047
+        },
+        {
+          "name": "Do. 06. Aug.",
+          "event_id": 58489,
+          "ef_id": 57049
+        },
+        {
+          "name": "Sa. 01. Aug.",
+          "event_id": 58490,
+          "ef_id": 57051
+        },
+        {
+          "name": "Fr. 07. Aug.",
+          "event_id": 58491,
+          "ef_id": 57052
+        },
+        {
+          "name": "Sa. 08. Aug.",
+          "event_id": 58492,
+          "ef_id": 57053
+        },
+        {
+          "name": "Do. 13. Aug.",
+          "event_id": 58493,
+          "ef_id": 57054
+        },
+        {
+          "name": "Fr. 14. Aug.",
+          "event_id": 58494,
+          "ef_id": 57056
+        },
+        {
+          "name": "Sa. 15. Aug.",
+          "event_id": 58495,
+          "ef_id": 57057
+        },
+        {
+          "name": "Do. 20. Aug.",
+          "event_id": 58496,
+          "ef_id": 57055
+        },
+        {
+          "name": "Fr. 21. Aug.",
+          "event_id": 58497,
+          "ef_id": 57058
+        },
+        {
+          "name": "Sa. 22. Aug.",
+          "event_id": 58498,
+          "ef_id": 57060
+        },
+        {
+          "name": "Do. 27. Aug.",
+          "event_id": 58499,
+          "ef_id": 57059
+        },
+        {
+          "name": "Fr. 28. Aug.",
+          "event_id": 58500,
+          "ef_id": 57061
+        },
+        {
+          "name": "Sa. 29. Aug.",
+          "event_id": 58501,
+          "ef_id": 57062
+        },
+        {
+          "name": "Do. 03. Sept.",
+          "event_id": 58502,
+          "ef_id": 57063
+        },
+        {
+          "name": "Fr. 04. Sept.",
+          "event_id": 58503,
+          "ef_id": 57065
+        },
+        {
+          "name": "Sa. 05. Sept.",
+          "event_id": 58504,
+          "ef_id": 57064
+        },
+        {
+          "name": "Do. 10. Sept.",
+          "event_id": 58505,
+          "ef_id": 57066
+        },
+        {
+          "name": "Fr. 11. Sept.",
+          "event_id": 58506,
+          "ef_id": 57067
+        },
+        {
+          "name": "Sa. 12. Sept.",
+          "event_id": 58507,
+          "ef_id": 57069
+        },
+        {
+          "name": "Do. 17. Sept.",
+          "event_id": 58508,
+          "ef_id": 57068
+        },
+        {
+          "name": "Fr. 18. Sept.",
+          "event_id": 58509,
+          "ef_id": 57070
+        },
+        {
+          "name": "Sa. 19. Sept.",
+          "event_id": 58510,
+          "ef_id": 57071
+        },
+        {
+          "name": "Do. 24. Sept.",
+          "event_id": 58511,
+          "ef_id": 57073
+        },
+        {
+          "name": "Fr. 25. Sept.",
+          "event_id": 58512,
+          "ef_id": 57072
+        },
+        {
+          "name": "Sa. 26. Sept.",
+          "event_id": 58513,
+          "ef_id": 57074
+        },
+        {
+          "name": "Do. 01. Okt.",
+          "event_id": 58514,
+          "ef_id": 57075
+        },
+        {
+          "name": "Fr. 02. Okt.",
+          "event_id": 58515,
+          "ef_id": 57076
+        },
+        {
+          "name": "Sa. 03. Okt.",
+          "event_id": 58516,
+          "ef_id": 57077
+        },
+        {
+          "name": "Do. 08. Okt.",
+          "event_id": 58517,
+          "ef_id": 57092
+        },
+        {
+          "name": "Sa. 10. Okt.",
+          "event_id": 58518,
+          "ef_id": 57078
+        },
+        {
+          "name": "Fr. 09. Okt.",
+          "event_id": 58519,
+          "ef_id": 57079
+        },
+        {
+          "name": "Do. 15. Okt.",
+          "event_id": 58520,
+          "ef_id": 57080
+        },
+        {
+          "name": "Fr. 16. Okt.",
+          "event_id": 58521,
+          "ef_id": 57081
+        },
+        {
+          "name": "Do. 22. Okt.",
+          "event_id": 58522,
+          "ef_id": 57082
+        },
+        {
+          "name": "Sa. 17. Okt.",
+          "event_id": 58523,
+          "ef_id": 57085
+        },
+        {
+          "name": "Fr. 23. Okt.",
+          "event_id": 58524,
+          "ef_id": 57084
+        },
+        {
+          "name": "Sa. 24. Okt.",
+          "event_id": 58525,
+          "ef_id": 57086
+        },
+        {
+          "name": "Do. 29. Okt.",
+          "event_id": 58526,
+          "ef_id": 57083
+        },
+        {
+          "name": "Fr. 30. Okt.",
+          "event_id": 58527,
+          "ef_id": 57087
+        },
+        {
+          "name": "Sa. 31. Okt.",
+          "event_id": 58528,
+          "ef_id": 57088
+        },
+        {
+          "name": "Do. 05. Nov.",
+          "event_id": 58529,
+          "ef_id": 57089
+        },
+        {
+          "name": "Fr. 06. Nov.",
+          "event_id": 58530,
+          "ef_id": 57091
+        },
+        {
+          "name": "Sa. 07. Nov.",
+          "event_id": 58531,
+          "ef_id": 57090
+        },
+        {
+          "name": "Fr. 13. Nov.",
+          "event_id": 58532,
+          "ef_id": 57093
+        },
+        {
+          "name": "Do. 12. Nov.",
+          "event_id": 58533,
+          "ef_id": 57095
+        },
+        {
+          "name": "Sa. 14. Nov.",
+          "event_id": 58534,
+          "ef_id": 57096
+        },
+        {
+          "name": "Do. 19. Nov.",
+          "event_id": 58535,
+          "ef_id": 57094
+        },
+        {
+          "name": "Fr. 20. Nov.",
+          "event_id": 58536,
+          "ef_id": 57098
+        },
+        {
+          "name": "Sa. 21. Nov.",
+          "event_id": 58537,
+          "ef_id": 57097
+        },
+        {
+          "name": "Do. 26. Nov.",
+          "event_id": 58538,
+          "ef_id": 57099
+        },
+        {
+          "name": "Fr. 27. Nov.",
+          "event_id": 58539,
+          "ef_id": 57100
+        },
+        {
+          "name": "Sa. 28. Nov.",
+          "event_id": 58540,
+          "ef_id": 57119
+        },
+        {
+          "name": "Do. 03. Dez.",
+          "event_id": 58541,
+          "ef_id": 57101
+        },
+        {
+          "name": "Fr. 04. Dez.",
+          "event_id": 58542,
+          "ef_id": 57102
+        },
+        {
+          "name": "Do. 10. Dez.",
+          "event_id": 58543,
+          "ef_id": 57103
+        },
+        {
+          "name": "Sa. 05. Dez.",
+          "event_id": 58544,
+          "ef_id": 57104
+        },
+        {
+          "name": "Fr. 11. Dez.",
+          "event_id": 58545,
+          "ef_id": 57106
+        },
+        {
+          "name": "Sa. 12. Dez.",
+          "event_id": 58546,
+          "ef_id": 57105
+        },
+        {
+          "name": "Do. 17. Dez.",
+          "event_id": 58547,
+          "ef_id": 57108
+        },
+        {
+          "name": "Fr. 18. Dez.",
+          "event_id": 58548,
+          "ef_id": 57107
+        },
+        {
+          "name": "Fr. 25. Dez.",
+          "event_id": 58549,
+          "ef_id": 57109
+        },
+        {
+          "name": "Do. 24. Dez.",
+          "event_id": 58550,
+          "ef_id": 57111
+        },
+        {
+          "name": "Sa. 19. Dez.",
+          "event_id": 58551,
+          "ef_id": 57110
+        },
+        {
+          "name": "Do. 31. Dez.",
+          "event_id": 58552,
+          "ef_id": 57113
+        },
+        {
+          "name": "Sa. 26. Dez.",
+          "event_id": 58553,
+          "ef_id": 57112
+        }
+      ]
+    },
+    {
+      "code": "C014",
+      "name": "MEDIA MARKT MEYRIN",
+      "project_id": 6051,
+      "location_id": 2202,
+      "storeid": "CXY26010013",
+      "lang": "FR-CH",
+      "sat": "09:30-18:00",
+      "event_count": 79,
+      "events": [
+        {
+          "name": "Do. 02. Juli",
+          "event_id": 58554,
+          "ef_id": 57114
+        },
+        {
+          "name": "Fr. 03. Juli",
+          "event_id": 58555,
+          "ef_id": 57116
+        },
+        {
+          "name": "Sa. 04. Juli",
+          "event_id": 58556,
+          "ef_id": 57117
+        },
+        {
+          "name": "Do. 09. Juli",
+          "event_id": 58557,
+          "ef_id": 57115
+        },
+        {
+          "name": "Sa. 11. Juli",
+          "event_id": 58558,
+          "ef_id": 57118
+        },
+        {
+          "name": "Do. 16. Juli",
+          "event_id": 58559,
+          "ef_id": 57120
+        },
+        {
+          "name": "Fr. 10. Juli",
+          "event_id": 58560,
+          "ef_id": 57122
+        },
+        {
+          "name": "Fr. 17. Juli",
+          "event_id": 58561,
+          "ef_id": 57121
+        },
+        {
+          "name": "Sa. 18. Juli",
+          "event_id": 58562,
+          "ef_id": 57123
+        },
+        {
+          "name": "Fr. 24. Juli",
+          "event_id": 58563,
+          "ef_id": 57124
+        },
+        {
+          "name": "Sa. 25. Juli",
+          "event_id": 58564,
+          "ef_id": 57125
+        },
+        {
+          "name": "Do. 30. Juli",
+          "event_id": 58565,
+          "ef_id": 57127
+        },
+        {
+          "name": "Do. 23. Juli",
+          "event_id": 58566,
+          "ef_id": 57126
+        },
+        {
+          "name": "Fr. 31. Juli",
+          "event_id": 58567,
+          "ef_id": 57128
+        },
+        {
+          "name": "Sa. 01. Aug.",
+          "event_id": 58568,
+          "ef_id": 57130
+        },
+        {
+          "name": "Do. 06. Aug.",
+          "event_id": 58569,
+          "ef_id": 57129
+        },
+        {
+          "name": "Fr. 07. Aug.",
+          "event_id": 58570,
+          "ef_id": 57133
+        },
+        {
+          "name": "Sa. 08. Aug.",
+          "event_id": 58571,
+          "ef_id": 57131
+        },
+        {
+          "name": "Do. 13. Aug.",
+          "event_id": 58572,
+          "ef_id": 57132
+        },
+        {
+          "name": "Sa. 15. Aug.",
+          "event_id": 58573,
+          "ef_id": 57134
+        },
+        {
+          "name": "Fr. 14. Aug.",
+          "event_id": 58574,
+          "ef_id": 57135
+        },
+        {
+          "name": "Do. 20. Aug.",
+          "event_id": 58575,
+          "ef_id": 57136
+        },
+        {
+          "name": "Fr. 21. Aug.",
+          "event_id": 58576,
+          "ef_id": 57137
+        },
+        {
+          "name": "Sa. 22. Aug.",
+          "event_id": 58577,
+          "ef_id": 57138
+        },
+        {
+          "name": "Do. 27. Aug.",
+          "event_id": 58578,
+          "ef_id": 57145
+        },
+        {
+          "name": "Sa. 29. Aug.",
+          "event_id": 58579,
+          "ef_id": 57139
+        },
+        {
+          "name": "Fr. 28. Aug.",
+          "event_id": 58580,
+          "ef_id": 57140
+        },
+        {
+          "name": "Fr. 04. Sept.",
+          "event_id": 58581,
+          "ef_id": 57154
+        },
+        {
+          "name": "Do. 03. Sept.",
+          "event_id": 58582,
+          "ef_id": 57142
+        },
+        {
+          "name": "Sa. 05. Sept.",
+          "event_id": 58583,
+          "ef_id": 57141
+        },
+        {
+          "name": "Do. 10. Sept.",
+          "event_id": 58584,
+          "ef_id": 57143
+        },
+        {
+          "name": "Fr. 11. Sept.",
+          "event_id": 58585,
+          "ef_id": 57144
+        },
+        {
+          "name": "Sa. 12. Sept.",
+          "event_id": 58586,
+          "ef_id": 57146
+        },
+        {
+          "name": "Do. 17. Sept.",
+          "event_id": 58587,
+          "ef_id": 57147
+        },
+        {
+          "name": "Fr. 18. Sept.",
+          "event_id": 58588,
+          "ef_id": 57148
+        },
+        {
+          "name": "Sa. 19. Sept.",
+          "event_id": 58589,
+          "ef_id": 57149
+        },
+        {
+          "name": "Fr. 25. Sept.",
+          "event_id": 58590,
+          "ef_id": 57150
+        },
+        {
+          "name": "Do. 24. Sept.",
+          "event_id": 58591,
+          "ef_id": 57152
+        },
+        {
+          "name": "Sa. 26. Sept.",
+          "event_id": 58592,
+          "ef_id": 57151
+        },
+        {
+          "name": "Do. 01. Okt.",
+          "event_id": 58593,
+          "ef_id": 57153
+        },
+        {
+          "name": "Fr. 02. Okt.",
+          "event_id": 58594,
+          "ef_id": 57157
+        },
+        {
+          "name": "Sa. 03. Okt.",
+          "event_id": 58595,
+          "ef_id": 57156
+        },
+        {
+          "name": "Fr. 09. Okt.",
+          "event_id": 58596,
+          "ef_id": 57155
+        },
+        {
+          "name": "Sa. 10. Okt.",
+          "event_id": 58597,
+          "ef_id": 57159
+        },
+        {
+          "name": "Do. 15. Okt.",
+          "event_id": 58598,
+          "ef_id": 57158
+        },
+        {
+          "name": "Do. 08. Okt.",
+          "event_id": 58599,
+          "ef_id": 57160
+        },
+        {
+          "name": "Fr. 16. Okt.",
+          "event_id": 58600,
+          "ef_id": 57161
+        },
+        {
+          "name": "Sa. 17. Okt.",
+          "event_id": 58601,
+          "ef_id": 57162
+        },
+        {
+          "name": "Fr. 23. Okt.",
+          "event_id": 58602,
+          "ef_id": 57181
+        },
+        {
+          "name": "Do. 22. Okt.",
+          "event_id": 58603,
+          "ef_id": 57164
+        },
+        {
+          "name": "Sa. 24. Okt.",
+          "event_id": 58604,
+          "ef_id": 57165
+        },
+        {
+          "name": "Do. 29. Okt.",
+          "event_id": 58605,
+          "ef_id": 57163
+        },
+        {
+          "name": "Fr. 30. Okt.",
+          "event_id": 58606,
+          "ef_id": 57166
+        },
+        {
+          "name": "Sa. 31. Okt.",
+          "event_id": 58607,
+          "ef_id": 57171
+        },
+        {
+          "name": "Fr. 06. Nov.",
+          "event_id": 58608,
+          "ef_id": 57167
+        },
+        {
+          "name": "Do. 05. Nov.",
+          "event_id": 58609,
+          "ef_id": 57169
+        },
+        {
+          "name": "Sa. 07. Nov.",
+          "event_id": 58610,
+          "ef_id": 57170
+        },
+        {
+          "name": "Do. 12. Nov.",
+          "event_id": 58611,
+          "ef_id": 57168
+        },
+        {
+          "name": "Fr. 13. Nov.",
+          "event_id": 58612,
+          "ef_id": 57172
+        },
+        {
+          "name": "Sa. 14. Nov.",
+          "event_id": 58613,
+          "ef_id": 57174
+        },
+        {
+          "name": "Do. 19. Nov.",
+          "event_id": 58614,
+          "ef_id": 57175
+        },
+        {
+          "name": "Fr. 20. Nov.",
+          "event_id": 58615,
+          "ef_id": 57173
+        },
+        {
+          "name": "Do. 26. Nov.",
+          "event_id": 58616,
+          "ef_id": 57178
+        },
+        {
+          "name": "Fr. 27. Nov.",
+          "event_id": 58617,
+          "ef_id": 57176
+        },
+        {
+          "name": "Sa. 28. Nov.",
+          "event_id": 58618,
+          "ef_id": 57177
+        },
+        {
+          "name": "Sa. 21. Nov.",
+          "event_id": 58619,
+          "ef_id": 57179
+        },
+        {
+          "name": "Do. 03. Dez.",
+          "event_id": 58620,
+          "ef_id": 57180
+        },
+        {
+          "name": "Fr. 04. Dez.",
+          "event_id": 58621,
+          "ef_id": 57182
+        },
+        {
+          "name": "Sa. 05. Dez.",
+          "event_id": 58622,
+          "ef_id": 57197
+        },
+        {
+          "name": "Fr. 11. Dez.",
+          "event_id": 58623,
+          "ef_id": 57183
+        },
+        {
+          "name": "Do. 10. Dez.",
+          "event_id": 58624,
+          "ef_id": 57185
+        },
+        {
+          "name": "Do. 17. Dez.",
+          "event_id": 58625,
+          "ef_id": 57184
+        },
+        {
+          "name": "Sa. 12. Dez.",
+          "event_id": 58626,
+          "ef_id": 57186
+        },
+        {
+          "name": "Fr. 18. Dez.",
+          "event_id": 58627,
+          "ef_id": 57187
+        },
+        {
+          "name": "Sa. 19. Dez.",
+          "event_id": 58628,
+          "ef_id": 57188
+        },
+        {
+          "name": "Do. 24. Dez.",
+          "event_id": 58629,
+          "ef_id": 57189
+        },
+        {
+          "name": "Fr. 25. Dez.",
+          "event_id": 58630,
+          "ef_id": 57194
+        },
+        {
+          "name": "Sa. 26. Dez.",
+          "event_id": 58631,
+          "ef_id": 57191
+        },
+        {
+          "name": "Do. 31. Dez.",
+          "event_id": 58632,
+          "ef_id": 57193
+        }
+      ]
+    },
+    {
+      "code": "F901",
+      "name": "INTERDISCOUNT AARAU",
+      "project_id": 6052,
+      "location_id": 2203,
+      "storeid": "CXY26010014",
+      "lang": "D-CH",
+      "sat": "08:30-17:00",
+      "event_count": 79,
+      "events": [
+        {
+          "name": "Do. 02. Juli",
+          "event_id": 58633,
+          "ef_id": 57190
+        },
+        {
+          "name": "Fr. 03. Juli",
+          "event_id": 58634,
+          "ef_id": 57192
+        },
+        {
+          "name": "Sa. 04. Juli",
+          "event_id": 58635,
+          "ef_id": 57195
+        },
+        {
+          "name": "Do. 09. Juli",
+          "event_id": 58636,
+          "ef_id": 57196
+        },
+        {
+          "name": "Fr. 10. Juli",
+          "event_id": 58637,
+          "ef_id": 57199
+        },
+        {
+          "name": "Sa. 11. Juli",
+          "event_id": 58638,
+          "ef_id": 57200
+        },
+        {
+          "name": "Do. 16. Juli",
+          "event_id": 58639,
+          "ef_id": 57198
+        },
+        {
+          "name": "Fr. 17. Juli",
+          "event_id": 58640,
+          "ef_id": 57201
+        },
+        {
+          "name": "Sa. 18. Juli",
+          "event_id": 58641,
+          "ef_id": 57202
+        },
+        {
+          "name": "Do. 23. Juli",
+          "event_id": 58642,
+          "ef_id": 57203
+        },
+        {
+          "name": "Fr. 24. Juli",
+          "event_id": 58643,
+          "ef_id": 57204
+        },
+        {
+          "name": "Sa. 25. Juli",
+          "event_id": 58644,
+          "ef_id": 57206
+        },
+        {
+          "name": "Do. 30. Juli",
+          "event_id": 58645,
+          "ef_id": 57205
+        },
+        {
+          "name": "Fr. 31. Juli",
+          "event_id": 58646,
+          "ef_id": 57207
+        },
+        {
+          "name": "Fr. 07. Aug.",
+          "event_id": 58647,
+          "ef_id": 57208
+        },
+        {
+          "name": "Do. 06. Aug.",
+          "event_id": 58648,
+          "ef_id": 57221
+        },
+        {
+          "name": "Sa. 08. Aug.",
+          "event_id": 58649,
+          "ef_id": 57209
+        },
+        {
+          "name": "Do. 13. Aug.",
+          "event_id": 58650,
+          "ef_id": 57210
+        },
+        {
+          "name": "Sa. 15. Aug.",
+          "event_id": 58651,
+          "ef_id": 57211
+        },
+        {
+          "name": "Fr. 14. Aug.",
+          "event_id": 58652,
+          "ef_id": 57212
+        },
+        {
+          "name": "Do. 20. Aug.",
+          "event_id": 58653,
+          "ef_id": 57215
+        },
+        {
+          "name": "Sa. 01. Aug.",
+          "event_id": 58654,
+          "ef_id": 57214
+        },
+        {
+          "name": "Fr. 21. Aug.",
+          "event_id": 58655,
+          "ef_id": 57213
+        },
+        {
+          "name": "Sa. 22. Aug.",
+          "event_id": 58656,
+          "ef_id": 57216
+        },
+        {
+          "name": "Do. 27. Aug.",
+          "event_id": 58657,
+          "ef_id": 57217
+        },
+        {
+          "name": "Fr. 28. Aug.",
+          "event_id": 58658,
+          "ef_id": 57218
+        },
+        {
+          "name": "Sa. 29. Aug.",
+          "event_id": 58659,
+          "ef_id": 57219
+        },
+        {
+          "name": "Do. 03. Sept.",
+          "event_id": 58660,
+          "ef_id": 57223
+        },
+        {
+          "name": "Fr. 04. Sept.",
+          "event_id": 58661,
+          "ef_id": 57220
+        },
+        {
+          "name": "Sa. 05. Sept.",
+          "event_id": 58662,
+          "ef_id": 57222
+        },
+        {
+          "name": "Do. 10. Sept.",
+          "event_id": 58663,
+          "ef_id": 57224
+        },
+        {
+          "name": "Fr. 11. Sept.",
+          "event_id": 58664,
+          "ef_id": 57226
+        },
+        {
+          "name": "Sa. 12. Sept.",
+          "event_id": 58665,
+          "ef_id": 57228
+        },
+        {
+          "name": "Fr. 18. Sept.",
+          "event_id": 58666,
+          "ef_id": 57225
+        },
+        {
+          "name": "Do. 17. Sept.",
+          "event_id": 58667,
+          "ef_id": 57229
+        },
+        {
+          "name": "Sa. 19. Sept.",
+          "event_id": 58668,
+          "ef_id": 57227
+        },
+        {
+          "name": "Do. 24. Sept.",
+          "event_id": 58669,
+          "ef_id": 57230
+        },
+        {
+          "name": "Fr. 25. Sept.",
+          "event_id": 58670,
+          "ef_id": 57231
+        },
+        {
+          "name": "Sa. 26. Sept.",
+          "event_id": 58671,
+          "ef_id": 57234
+        },
+        {
+          "name": "Do. 01. Okt.",
+          "event_id": 58672,
+          "ef_id": 57232
+        },
+        {
+          "name": "Fr. 02. Okt.",
+          "event_id": 58673,
+          "ef_id": 57233
+        },
+        {
+          "name": "Sa. 03. Okt.",
+          "event_id": 58674,
+          "ef_id": 57235
+        },
+        {
+          "name": "Fr. 09. Okt.",
+          "event_id": 58675,
+          "ef_id": 57237
+        },
+        {
+          "name": "Do. 08. Okt.",
+          "event_id": 58676,
+          "ef_id": 57236
+        },
+        {
+          "name": "Do. 15. Okt.",
+          "event_id": 58677,
+          "ef_id": 57238
+        },
+        {
+          "name": "Sa. 10. Okt.",
+          "event_id": 58678,
+          "ef_id": 57239
+        },
+        {
+          "name": "Fr. 16. Okt.",
+          "event_id": 58679,
+          "ef_id": 57240
+        },
+        {
+          "name": "Do. 22. Okt.",
+          "event_id": 58680,
+          "ef_id": 57241
+        },
+        {
+          "name": "Sa. 17. Okt.",
+          "event_id": 58681,
+          "ef_id": 57243
+        },
+        {
+          "name": "Fr. 23. Okt.",
+          "event_id": 58682,
+          "ef_id": 57242
+        },
+        {
+          "name": "Sa. 24. Okt.",
+          "event_id": 58683,
+          "ef_id": 57244
+        },
+        {
+          "name": "Fr. 30. Okt.",
+          "event_id": 58684,
+          "ef_id": 57246
+        },
+        {
+          "name": "Do. 29. Okt.",
+          "event_id": 58685,
+          "ef_id": 57247
+        },
+        {
+          "name": "Sa. 31. Okt.",
+          "event_id": 58686,
+          "ef_id": 57248
+        },
+        {
+          "name": "Do. 05. Nov.",
+          "event_id": 58687,
+          "ef_id": 57245
+        },
+        {
+          "name": "Fr. 06. Nov.",
+          "event_id": 58688,
+          "ef_id": 57249
+        },
+        {
+          "name": "Sa. 07. Nov.",
+          "event_id": 58689,
+          "ef_id": 57251
+        },
+        {
+          "name": "Do. 12. Nov.",
+          "event_id": 58690,
+          "ef_id": 57250
+        },
+        {
+          "name": "Fr. 13. Nov.",
+          "event_id": 58691,
+          "ef_id": 57252
+        },
+        {
+          "name": "Do. 19. Nov.",
+          "event_id": 58692,
+          "ef_id": 57265
+        },
+        {
+          "name": "Fr. 20. Nov.",
+          "event_id": 58693,
+          "ef_id": 57257
+        },
+        {
+          "name": "Sa. 14. Nov.",
+          "event_id": 58694,
+          "ef_id": 57254
+        },
+        {
+          "name": "Sa. 21. Nov.",
+          "event_id": 58695,
+          "ef_id": 57253
+        },
+        {
+          "name": "Do. 26. Nov.",
+          "event_id": 58696,
+          "ef_id": 57260
+        },
+        {
+          "name": "Fr. 27. Nov.",
+          "event_id": 58697,
+          "ef_id": 57255
+        },
+        {
+          "name": "Sa. 28. Nov.",
+          "event_id": 58698,
+          "ef_id": 57256
+        },
+        {
+          "name": "Fr. 04. Dez.",
+          "event_id": 58699,
+          "ef_id": 57258
+        },
+        {
+          "name": "Sa. 05. Dez.",
+          "event_id": 58700,
+          "ef_id": 57259
+        },
+        {
+          "name": "Do. 10. Dez.",
+          "event_id": 58701,
+          "ef_id": 57261
+        },
+        {
+          "name": "Do. 03. Dez.",
+          "event_id": 58702,
+          "ef_id": 57262
+        },
+        {
+          "name": "Fr. 11. Dez.",
+          "event_id": 58703,
+          "ef_id": 57263
+        },
+        {
+          "name": "Sa. 12. Dez.",
+          "event_id": 58704,
+          "ef_id": 57264
+        },
+        {
+          "name": "Do. 17. Dez.",
+          "event_id": 58705,
+          "ef_id": 57267
+        },
+        {
+          "name": "Fr. 18. Dez.",
+          "event_id": 58706,
+          "ef_id": 57266
+        },
+        {
+          "name": "Sa. 19. Dez.",
+          "event_id": 58707,
+          "ef_id": 57268
+        },
+        {
+          "name": "Do. 24. Dez.",
+          "event_id": 58708,
+          "ef_id": 57270
+        },
+        {
+          "name": "Fr. 25. Dez.",
+          "event_id": 58709,
+          "ef_id": 57269
+        },
+        {
+          "name": "Do. 31. Dez.",
+          "event_id": 58710,
+          "ef_id": 57271
+        },
+        {
+          "name": "Sa. 26. Dez.",
+          "event_id": 58711,
+          "ef_id": 57272
+        }
+      ]
+    },
+    {
+      "code": "F902",
+      "name": "INTERDISCOUNT HEIMBERG CF XXL",
+      "project_id": 6053,
+      "location_id": 2204,
+      "storeid": "CXY26010015",
+      "lang": "D-CH",
+      "sat": "08:30-17:00",
+      "event_count": 79,
+      "events": [
+        {
+          "name": "Do. 02. Juli",
+          "event_id": 58712,
+          "ef_id": 57273
+        },
+        {
+          "name": "Fr. 03. Juli",
+          "event_id": 58713,
+          "ef_id": 57275
+        },
+        {
+          "name": "Do. 09. Juli",
+          "event_id": 58714,
+          "ef_id": 57274
+        },
+        {
+          "name": "Sa. 04. Juli",
+          "event_id": 58715,
+          "ef_id": 57276
+        },
+        {
+          "name": "Fr. 10. Juli",
+          "event_id": 58716,
+          "ef_id": 57278
+        },
+        {
+          "name": "Sa. 11. Juli",
+          "event_id": 58717,
+          "ef_id": 57277
+        },
+        {
+          "name": "Do. 16. Juli",
+          "event_id": 58718,
+          "ef_id": 57279
+        },
+        {
+          "name": "Fr. 17. Juli",
+          "event_id": 58719,
+          "ef_id": 57292
+        },
+        {
+          "name": "Sa. 18. Juli",
+          "event_id": 58720,
+          "ef_id": 57281
+        },
+        {
+          "name": "Fr. 24. Juli",
+          "event_id": 58721,
+          "ef_id": 57280
+        },
+        {
+          "name": "Do. 23. Juli",
+          "event_id": 58722,
+          "ef_id": 57282
+        },
+        {
+          "name": "Sa. 25. Juli",
+          "event_id": 58723,
+          "ef_id": 57283
+        },
+        {
+          "name": "Do. 30. Juli",
+          "event_id": 58724,
+          "ef_id": 57285
+        },
+        {
+          "name": "Fr. 31. Juli",
+          "event_id": 58725,
+          "ef_id": 57287
+        },
+        {
+          "name": "Sa. 01. Aug.",
+          "event_id": 58726,
+          "ef_id": 57284
+        },
+        {
+          "name": "Do. 06. Aug.",
+          "event_id": 58727,
+          "ef_id": 57286
+        },
+        {
+          "name": "Fr. 07. Aug.",
+          "event_id": 58728,
+          "ef_id": 57296
+        },
+        {
+          "name": "Sa. 08. Aug.",
+          "event_id": 58729,
+          "ef_id": 57288
+        },
+        {
+          "name": "Fr. 14. Aug.",
+          "event_id": 58730,
+          "ef_id": 57289
+        },
+        {
+          "name": "Do. 13. Aug.",
+          "event_id": 58731,
+          "ef_id": 57290
+        },
+        {
+          "name": "Sa. 15. Aug.",
+          "event_id": 58732,
+          "ef_id": 57291
+        },
+        {
+          "name": "Do. 20. Aug.",
+          "event_id": 58733,
+          "ef_id": 57293
+        },
+        {
+          "name": "Fr. 21. Aug.",
+          "event_id": 58734,
+          "ef_id": 57294
+        },
+        {
+          "name": "Sa. 22. Aug.",
+          "event_id": 58735,
+          "ef_id": 57295
+        },
+        {
+          "name": "Do. 27. Aug.",
+          "event_id": 58736,
+          "ef_id": 57298
+        },
+        {
+          "name": "Fr. 28. Aug.",
+          "event_id": 58737,
+          "ef_id": 57301
+        },
+        {
+          "name": "Sa. 29. Aug.",
+          "event_id": 58738,
+          "ef_id": 57297
+        },
+        {
+          "name": "Do. 03. Sept.",
+          "event_id": 58739,
+          "ef_id": 57299
+        },
+        {
+          "name": "Fr. 04. Sept.",
+          "event_id": 58740,
+          "ef_id": 57300
+        },
+        {
+          "name": "Do. 10. Sept.",
+          "event_id": 58741,
+          "ef_id": 57302
+        },
+        {
+          "name": "Sa. 05. Sept.",
+          "event_id": 58742,
+          "ef_id": 57305
+        },
+        {
+          "name": "Fr. 11. Sept.",
+          "event_id": 58743,
+          "ef_id": 57303
+        },
+        {
+          "name": "Sa. 12. Sept.",
+          "event_id": 58744,
+          "ef_id": 57304
+        },
+        {
+          "name": "Do. 17. Sept.",
+          "event_id": 58745,
+          "ef_id": 57306
+        },
+        {
+          "name": "Fr. 18. Sept.",
+          "event_id": 58746,
+          "ef_id": 57307
+        },
+        {
+          "name": "Sa. 19. Sept.",
+          "event_id": 58747,
+          "ef_id": 57309
+        },
+        {
+          "name": "Do. 24. Sept.",
+          "event_id": 58748,
+          "ef_id": 57320
+        },
+        {
+          "name": "Fr. 25. Sept.",
+          "event_id": 58749,
+          "ef_id": 57308
+        },
+        {
+          "name": "Sa. 26. Sept.",
+          "event_id": 58750,
+          "ef_id": 57311
+        },
+        {
+          "name": "Fr. 02. Okt.",
+          "event_id": 58751,
+          "ef_id": 57313
+        },
+        {
+          "name": "Do. 08. Okt.",
+          "event_id": 58752,
+          "ef_id": 57310
+        },
+        {
+          "name": "Do. 01. Okt.",
+          "event_id": 58753,
+          "ef_id": 57312
+        },
+        {
+          "name": "Sa. 03. Okt.",
+          "event_id": 58754,
+          "ef_id": 57314
+        },
+        {
+          "name": "Fr. 09. Okt.",
+          "event_id": 58755,
+          "ef_id": 57316
+        },
+        {
+          "name": "Sa. 10. Okt.",
+          "event_id": 58756,
+          "ef_id": 57315
+        },
+        {
+          "name": "Do. 15. Okt.",
+          "event_id": 58757,
+          "ef_id": 57317
+        },
+        {
+          "name": "Fr. 16. Okt.",
+          "event_id": 58758,
+          "ef_id": 57318
+        },
+        {
+          "name": "Sa. 17. Okt.",
+          "event_id": 58759,
+          "ef_id": 57319
+        },
+        {
+          "name": "Do. 22. Okt.",
+          "event_id": 58760,
+          "ef_id": 57322
+        },
+        {
+          "name": "Fr. 23. Okt.",
+          "event_id": 58761,
+          "ef_id": 57323
+        },
+        {
+          "name": "Sa. 24. Okt.",
+          "event_id": 58762,
+          "ef_id": 57321
+        },
+        {
+          "name": "Do. 29. Okt.",
+          "event_id": 58763,
+          "ef_id": 57324
+        },
+        {
+          "name": "Fr. 30. Okt.",
+          "event_id": 58764,
+          "ef_id": 57325
+        },
+        {
+          "name": "Sa. 31. Okt.",
+          "event_id": 58765,
+          "ef_id": 57326
+        },
+        {
+          "name": "Do. 05. Nov.",
+          "event_id": 58766,
+          "ef_id": 57327
+        },
+        {
+          "name": "Fr. 06. Nov.",
+          "event_id": 58767,
+          "ef_id": 57328
+        },
+        {
+          "name": "Do. 12. Nov.",
+          "event_id": 58768,
+          "ef_id": 57329
+        },
+        {
+          "name": "Sa. 07. Nov.",
+          "event_id": 58769,
+          "ef_id": 57330
+        },
+        {
+          "name": "Fr. 13. Nov.",
+          "event_id": 58770,
+          "ef_id": 57332
+        },
+        {
+          "name": "Sa. 14. Nov.",
+          "event_id": 58771,
+          "ef_id": 57331
+        },
+        {
+          "name": "Do. 19. Nov.",
+          "event_id": 58772,
+          "ef_id": 57333
+        },
+        {
+          "name": "Fr. 20. Nov.",
+          "event_id": 58773,
+          "ef_id": 57334
+        },
+        {
+          "name": "Sa. 21. Nov.",
+          "event_id": 58774,
+          "ef_id": 57335
+        },
+        {
+          "name": "Do. 26. Nov.",
+          "event_id": 58775,
+          "ef_id": 57337
+        },
+        {
+          "name": "Fr. 27. Nov.",
+          "event_id": 58776,
+          "ef_id": 57336
+        },
+        {
+          "name": "Sa. 28. Nov.",
+          "event_id": 58777,
+          "ef_id": 57338
+        },
+        {
+          "name": "Do. 03. Dez.",
+          "event_id": 58778,
+          "ef_id": 57340
+        },
+        {
+          "name": "Fr. 04. Dez.",
+          "event_id": 58779,
+          "ef_id": 57339
+        },
+        {
+          "name": "Fr. 11. Dez.",
+          "event_id": 58780,
+          "ef_id": 57342
+        },
+        {
+          "name": "Sa. 12. Dez.",
+          "event_id": 58781,
+          "ef_id": 57341
+        },
+        {
+          "name": "Sa. 05. Dez.",
+          "event_id": 58782,
+          "ef_id": 57343
+        },
+        {
+          "name": "Do. 10. Dez.",
+          "event_id": 58783,
+          "ef_id": 57344
+        },
+        {
+          "name": "Do. 17. Dez.",
+          "event_id": 58784,
+          "ef_id": 57346
+        },
+        {
+          "name": "Fr. 18. Dez.",
+          "event_id": 58785,
+          "ef_id": 57345
+        },
+        {
+          "name": "Sa. 19. Dez.",
+          "event_id": 58786,
+          "ef_id": 57347
+        },
+        {
+          "name": "Do. 24. Dez.",
+          "event_id": 58787,
+          "ef_id": 57348
+        },
+        {
+          "name": "Fr. 25. Dez.",
+          "event_id": 58788,
+          "ef_id": 57350
+        },
+        {
+          "name": "Sa. 26. Dez.",
+          "event_id": 58789,
+          "ef_id": 57349
+        },
+        {
+          "name": "Do. 31. Dez.",
+          "event_id": 58790,
+          "ef_id": 57351
+        }
+      ]
+    },
+    {
+      "code": "F903",
+      "name": "INTERDISCOUNT LENZBURG",
+      "project_id": 6054,
+      "location_id": 2205,
+      "storeid": "CXY26010016",
+      "lang": "D-CH",
+      "sat": "09:30-18:00",
+      "event_count": 79,
+      "events": [
+        {
+          "name": "Do. 02. Juli",
+          "event_id": 58791,
+          "ef_id": 57354
+        },
+        {
+          "name": "Fr. 03. Juli",
+          "event_id": 58792,
+          "ef_id": 57352
+        },
+        {
+          "name": "Do. 09. Juli",
+          "event_id": 58793,
+          "ef_id": 57353
+        },
+        {
+          "name": "Sa. 04. Juli",
+          "event_id": 58794,
+          "ef_id": 57356
+        },
+        {
+          "name": "Fr. 10. Juli",
+          "event_id": 58795,
+          "ef_id": 57355
+        },
+        {
+          "name": "Sa. 11. Juli",
+          "event_id": 58796,
+          "ef_id": 57357
+        },
+        {
+          "name": "Fr. 17. Juli",
+          "event_id": 58797,
+          "ef_id": 57358
+        },
+        {
+          "name": "Do. 16. Juli",
+          "event_id": 58798,
+          "ef_id": 57359
+        },
+        {
+          "name": "Sa. 18. Juli",
+          "event_id": 58799,
+          "ef_id": 57362
+        },
+        {
+          "name": "Do. 23. Juli",
+          "event_id": 58800,
+          "ef_id": 57360
+        },
+        {
+          "name": "Fr. 24. Juli",
+          "event_id": 58801,
+          "ef_id": 57361
+        },
+        {
+          "name": "Sa. 25. Juli",
+          "event_id": 58802,
+          "ef_id": 57363
+        },
+        {
+          "name": "Do. 30. Juli",
+          "event_id": 58803,
+          "ef_id": 57364
+        },
+        {
+          "name": "Fr. 31. Juli",
+          "event_id": 58804,
+          "ef_id": 57365
+        },
+        {
+          "name": "Sa. 01. Aug.",
+          "event_id": 58805,
+          "ef_id": 57375
+        },
+        {
+          "name": "Do. 06. Aug.",
+          "event_id": 58806,
+          "ef_id": 57366
+        },
+        {
+          "name": "Fr. 07. Aug.",
+          "event_id": 58807,
+          "ef_id": 57369
+        },
+        {
+          "name": "Sa. 08. Aug.",
+          "event_id": 58808,
+          "ef_id": 57367
+        },
+        {
+          "name": "Fr. 14. Aug.",
+          "event_id": 58809,
+          "ef_id": 57368
+        },
+        {
+          "name": "Do. 13. Aug.",
+          "event_id": 58810,
+          "ef_id": 57370
+        },
+        {
+          "name": "Sa. 15. Aug.",
+          "event_id": 58811,
+          "ef_id": 57371
+        },
+        {
+          "name": "Fr. 21. Aug.",
+          "event_id": 58812,
+          "ef_id": 57372
+        },
+        {
+          "name": "Sa. 22. Aug.",
+          "event_id": 58813,
+          "ef_id": 57373
+        },
+        {
+          "name": "Do. 20. Aug.",
+          "event_id": 58814,
+          "ef_id": 57374
+        },
+        {
+          "name": "Sa. 29. Aug.",
+          "event_id": 58815,
+          "ef_id": 57376
+        },
+        {
+          "name": "Do. 27. Aug.",
+          "event_id": 58816,
+          "ef_id": 57377
+        },
+        {
+          "name": "Do. 03. Sept.",
+          "event_id": 58817,
+          "ef_id": 57388
+        },
+        {
+          "name": "Fr. 04. Sept.",
+          "event_id": 58818,
+          "ef_id": 57378
+        },
+        {
+          "name": "Sa. 05. Sept.",
+          "event_id": 58819,
+          "ef_id": 57381
+        },
+        {
+          "name": "Fr. 28. Aug.",
+          "event_id": 58820,
+          "ef_id": 57379
+        },
+        {
+          "name": "Do. 10. Sept.",
+          "event_id": 58821,
+          "ef_id": 57380
+        },
+        {
+          "name": "Do. 17. Sept.",
+          "event_id": 58822,
+          "ef_id": 57387
+        },
+        {
+          "name": "Sa. 12. Sept.",
+          "event_id": 58823,
+          "ef_id": 57382
+        },
+        {
+          "name": "Fr. 11. Sept.",
+          "event_id": 58824,
+          "ef_id": 57383
+        },
+        {
+          "name": "Fr. 18. Sept.",
+          "event_id": 58825,
+          "ef_id": 57386
+        },
+        {
+          "name": "Sa. 19. Sept.",
+          "event_id": 58826,
+          "ef_id": 57384
+        },
+        {
+          "name": "Do. 24. Sept.",
+          "event_id": 58827,
+          "ef_id": 57385
+        },
+        {
+          "name": "Fr. 25. Sept.",
+          "event_id": 58828,
+          "ef_id": 57389
+        },
+        {
+          "name": "Sa. 26. Sept.",
+          "event_id": 58829,
+          "ef_id": 57390
+        },
+        {
+          "name": "Do. 01. Okt.",
+          "event_id": 58830,
+          "ef_id": 57391
+        },
+        {
+          "name": "Sa. 03. Okt.",
+          "event_id": 58831,
+          "ef_id": 57397
+        },
+        {
+          "name": "Do. 08. Okt.",
+          "event_id": 58832,
+          "ef_id": 57392
+        },
+        {
+          "name": "Fr. 09. Okt.",
+          "event_id": 58833,
+          "ef_id": 57393
+        },
+        {
+          "name": "Sa. 10. Okt.",
+          "event_id": 58834,
+          "ef_id": 57394
+        },
+        {
+          "name": "Fr. 02. Okt.",
+          "event_id": 58835,
+          "ef_id": 57395
+        },
+        {
+          "name": "Do. 15. Okt.",
+          "event_id": 58836,
+          "ef_id": 57396
+        },
+        {
+          "name": "Fr. 16. Okt.",
+          "event_id": 58837,
+          "ef_id": 57398
+        },
+        {
+          "name": "Sa. 17. Okt.",
+          "event_id": 58838,
+          "ef_id": 57399
+        },
+        {
+          "name": "Do. 22. Okt.",
+          "event_id": 58839,
+          "ef_id": 57400
+        },
+        {
+          "name": "Fr. 23. Okt.",
+          "event_id": 58840,
+          "ef_id": 57401
+        },
+        {
+          "name": "Sa. 24. Okt.",
+          "event_id": 58841,
+          "ef_id": 57402
+        },
+        {
+          "name": "Do. 29. Okt.",
+          "event_id": 58842,
+          "ef_id": 57403
+        },
+        {
+          "name": "Fr. 30. Okt.",
+          "event_id": 58843,
+          "ef_id": 57404
+        },
+        {
+          "name": "Sa. 31. Okt.",
+          "event_id": 58844,
+          "ef_id": 57405
+        },
+        {
+          "name": "Do. 05. Nov.",
+          "event_id": 58845,
+          "ef_id": 57406
+        },
+        {
+          "name": "Fr. 06. Nov.",
+          "event_id": 58846,
+          "ef_id": 57407
+        },
+        {
+          "name": "Sa. 07. Nov.",
+          "event_id": 58847,
+          "ef_id": 57408
+        },
+        {
+          "name": "Do. 12. Nov.",
+          "event_id": 58848,
+          "ef_id": 57409
+        },
+        {
+          "name": "Fr. 13. Nov.",
+          "event_id": 58849,
+          "ef_id": 57410
+        },
+        {
+          "name": "Do. 19. Nov.",
+          "event_id": 58850,
+          "ef_id": 57411
+        },
+        {
+          "name": "Sa. 14. Nov.",
+          "event_id": 58851,
+          "ef_id": 57412
+        },
+        {
+          "name": "Sa. 21. Nov.",
+          "event_id": 58852,
+          "ef_id": 57413
+        },
+        {
+          "name": "Fr. 20. Nov.",
+          "event_id": 58853,
+          "ef_id": 57414
+        },
+        {
+          "name": "Do. 26. Nov.",
+          "event_id": 58854,
+          "ef_id": 57415
+        },
+        {
+          "name": "Fr. 27. Nov.",
+          "event_id": 58855,
+          "ef_id": 57416
+        },
+        {
+          "name": "Sa. 28. Nov.",
+          "event_id": 58856,
+          "ef_id": 57418
+        },
+        {
+          "name": "Do. 03. Dez.",
+          "event_id": 58857,
+          "ef_id": 57417
+        },
+        {
+          "name": "Fr. 04. Dez.",
+          "event_id": 58858,
+          "ef_id": 57419
+        },
+        {
+          "name": "Sa. 05. Dez.",
+          "event_id": 58859,
+          "ef_id": 57420
+        },
+        {
+          "name": "Do. 10. Dez.",
+          "event_id": 58860,
+          "ef_id": 57423
+        },
+        {
+          "name": "Fr. 11. Dez.",
+          "event_id": 58861,
+          "ef_id": 57421
+        },
+        {
+          "name": "Sa. 12. Dez.",
+          "event_id": 58862,
+          "ef_id": 57422
+        },
+        {
+          "name": "Do. 17. Dez.",
+          "event_id": 58863,
+          "ef_id": 57424
+        },
+        {
+          "name": "Fr. 18. Dez.",
+          "event_id": 58864,
+          "ef_id": 57425
+        },
+        {
+          "name": "Sa. 19. Dez.",
+          "event_id": 58865,
+          "ef_id": 57426
+        },
+        {
+          "name": "Fr. 25. Dez.",
+          "event_id": 58866,
+          "ef_id": 57428
+        },
+        {
+          "name": "Do. 24. Dez.",
+          "event_id": 58867,
+          "ef_id": 57427
+        },
+        {
+          "name": "Sa. 26. Dez.",
+          "event_id": 58868,
+          "ef_id": 57429
+        },
+        {
+          "name": "Do. 31. Dez.",
+          "event_id": 58869,
+          "ef_id": 57430
+        }
+      ]
+    }
+  ],
+  "excel": {
+    "file": "PLANNING_Dreame_2026-NEU.xlsx",
+    "backup": "PLANNING_Dreame_2026-NEU__BACKUP-original.xlsx",
+    "planning_rows_added": 474,
+    "planning_rows": "1642..2115",
+    "locations_rows_added": "12..17",
+    "table_ref": "A1:S2115",
+    "note": "surgical XML edit; calcChain removed; active filter Collombey+June preserved -> new rows hidden by filter"
+  },
+  "notes": [
+    "Event functions UNASSIGNED (planner assigns in UI).",
+    "EF-level planner_id stuck at 25 (Dominik, deleted) — API 500s on EF planner update; not user-visible. Event+project planner = 44 Marlene.",
+    "Codes C012/C013/C014/F901/F902/F903 are PLACEHOLDERS (no real store numbers were available) — stored in project dynamic_field_177 and Excel Code column.",
+    "2 of the 8 stores in the source file (Collombey F650 proj 3417, Haag F718 proj 3413) already existed — skipped."
+  ]
+}

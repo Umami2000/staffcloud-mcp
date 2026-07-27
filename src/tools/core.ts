@@ -13,6 +13,7 @@ import {
   findReplacement,
   updateProjectLocation,
   getPlannedHours,
+  checkEmployeeEmails,
 } from "../smart-tools.js";
 
 export const tools: ToolDefinition[] = [
@@ -694,6 +695,34 @@ export const tools: ToolDefinition[] = [
     },
   },
   {
+    name: "check_employee_emails",
+    description:
+      "SMART TOOL — Audit employee email addresses for missing, invalid, duplicate, " +
+      "role-style (info@, admin@), and likely-typo (gmial.com, hotnail.com) entries. " +
+      "Use before bulk mailings, exports, or migrations. " +
+      "Returns a summary plus a list of employees with issues. Pass detail=true for the full list. " +
+      "Requires PII access (STAFFCLOUD_PII_ACCESS=true) since it reads email fields. " +
+      "Default scope: active employees (status=4). Use status='4,5' or employee_ids for other scopes.",
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        status: {
+          type: "string",
+          description: 'Employee status filter. Default "4" (active). Examples: "4,5" (active+inactive), "0,1,2,3,4,5" (all non-deleted).',
+        },
+        employee_ids: {
+          type: "array",
+          items: { type: "number" },
+          description: "Limit the audit to a specific list of employee IDs.",
+        },
+        detail: {
+          type: "boolean",
+          description: "Return all employees, not just those with issues. Default: false.",
+        },
+      },
+    },
+  },
+  {
     name: "format_phone",
     description:
       "UTILITY — Format a phone number to Swiss E.164 format (+41 XX XXX XX XX). " +
@@ -1062,6 +1091,19 @@ export async function handle(
         name
       );
       result = formatResult(await resolveFieldValue(client, v));
+      return result;
+    }
+    case "check_employee_emails": {
+      const v = validate(
+        z.object({
+          status: z.string().optional(),
+          employee_ids: z.array(z.number().int().positive()).optional(),
+          detail: z.boolean().optional(),
+        }),
+        args,
+        name
+      );
+      result = formatResult(await checkEmployeeEmails(client, v, piiAccess));
       return result;
     }
     case "format_phone": {

@@ -121,6 +121,32 @@ export const tools: ToolDefinition[] = [
       },
     },
   },
+  {
+    name: "list_busy_dates",
+    description:
+      "List employee busy dates (vacations, leave, individual unavailability with reason). " +
+      "Each entry typically has employee_id, from, to, and a reason/note. Use filter to narrow by date range or employee.",
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        fields: { type: "string", description: "Comma-separated fields." },
+        filter: { type: "string", description: "Additional filters (e.g. 'from=2026-05-01&to=2026-11-04&employee_id=123')." },
+        sort: { type: "string", description: "Sort expression." },
+      },
+    },
+  },
+  {
+    name: "get_busy_date",
+    description: "Get a single busy date entry by ID.",
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        id: { type: "number", description: "Busy date ID." },
+        fields: { type: "string", description: "Comma-separated fields." },
+      },
+      required: ["id"],
+    },
+  },
 
   // ── Pay Runs & Pay Lines ──
   {
@@ -236,6 +262,12 @@ export async function handle(
       return formatResult(
         await client.listAvailabilityRequests(buildParams(args))
       );
+    case "list_busy_dates":
+      return formatResult(await client.listBusyDates(buildParams(args)));
+    case "get_busy_date": {
+      const v = validate(z.object({ id: zId, fields: zFields }), args, name);
+      return formatResult(await client.getBusyDate(v.id, buildParams(v)));
+    }
 
     // ── Pay Runs & Pay Lines ──
     case "list_pay_runs": {

@@ -1,0 +1,1252 @@
+[
+  {
+    "id": 2960,
+    "employee_id": 1432,
+    "from": "2026-05-04",
+    "to": "2026-05-04",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2921,
+    "employee_id": 1749,
+    "from": "2026-05-12",
+    "to": "2026-05-12",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2922,
+    "employee_id": 1749,
+    "from": "2026-05-13",
+    "to": "2026-05-13",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2923,
+    "employee_id": 1749,
+    "from": "2026-05-14",
+    "to": "2026-05-14",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2924,
+    "employee_id": 1749,
+    "from": "2026-05-15",
+    "to": "2026-05-15",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2925,
+    "employee_id": 1749,
+    "from": "2026-05-16",
+    "to": "2026-05-16",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2926,
+    "employee_id": 1749,
+    "from": "2026-05-17",
+    "to": "2026-05-17",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2920,
+    "employee_id": 1749,
+    "from": "2026-05-25",
+    "to": "2026-05-25",
+    "type": "day_off",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2949,
+    "employee_id": 2921,
+    "from": "2026-05-04",
+    "to": "2026-05-04",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2950,
+    "employee_id": 2921,
+    "from": "2026-05-05",
+    "to": "2026-05-05",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2951,
+    "employee_id": 2921,
+    "from": "2026-05-06",
+    "to": "2026-05-06",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2952,
+    "employee_id": 2921,
+    "from": "2026-05-07",
+    "to": "2026-05-07",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2953,
+    "employee_id": 2921,
+    "from": "2026-05-08",
+    "to": "2026-05-08",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2598,
+    "employee_id": 7721,
+    "from": "2026-05-04",
+    "to": "2026-05-04",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2599,
+    "employee_id": 7721,
+    "from": "2026-05-05",
+    "to": "2026-05-05",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2600,
+    "employee_id": 7721,
+    "from": "2026-05-06",
+    "to": "2026-05-06",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2601,
+    "employee_id": 7721,
+    "from": "2026-05-07",
+    "to": "2026-05-07",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2602,
+    "employee_id": 7721,
+    "from": "2026-05-08",
+    "to": "2026-05-08",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2603,
+    "employee_id": 7721,
+    "from": "2026-05-09",
+    "to": "2026-05-09",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2604,
+    "employee_id": 7721,
+    "from": "2026-05-10",
+    "to": "2026-05-10",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2605,
+    "employee_id": 7721,
+    "from": "2026-05-11",
+    "to": "2026-05-11",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2606,
+    "employee_id": 7721,
+    "from": "2026-05-12",
+    "to": "2026-05-12",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2607,
+    "employee_id": 7721,
+    "from": "2026-05-13",
+    "to": "2026-05-13",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2608,
+    "employee_id": 7721,
+    "from": "2026-05-14",
+    "to": "2026-05-14",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2609,
+    "employee_id": 7721,
+    "from": "2026-05-15",
+    "to": "2026-05-15",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2610,
+    "employee_id": 7721,
+    "from": "2026-05-16",
+    "to": "2026-05-16",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2611,
+    "employee_id": 7721,
+    "from": "2026-05-17",
+    "to": "2026-05-17",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2612,
+    "employee_id": 7721,
+    "from": "2026-05-18",
+    "to": "2026-05-18",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2613,
+    "employee_id": 7721,
+    "from": "2026-05-19",
+    "to": "2026-05-19",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2614,
+    "employee_id": 7721,
+    "from": "2026-05-20",
+    "to": "2026-05-20",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2615,
+    "employee_id": 7721,
+    "from": "2026-05-21",
+    "to": "2026-05-21",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2616,
+    "employee_id": 7721,
+    "from": "2026-05-22",
+    "to": "2026-05-22",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2617,
+    "employee_id": 7721,
+    "from": "2026-05-23",
+    "to": "2026-05-23",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2618,
+    "employee_id": 7721,
+    "from": "2026-05-24",
+    "to": "2026-05-24",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2619,
+    "employee_id": 7721,
+    "from": "2026-05-25",
+    "to": "2026-05-25",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2620,
+    "employee_id": 7721,
+    "from": "2026-05-26",
+    "to": "2026-05-26",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2621,
+    "employee_id": 7721,
+    "from": "2026-05-27",
+    "to": "2026-05-27",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2622,
+    "employee_id": 7721,
+    "from": "2026-05-28",
+    "to": "2026-05-28",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2623,
+    "employee_id": 7721,
+    "from": "2026-05-29",
+    "to": "2026-05-29",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2624,
+    "employee_id": 7721,
+    "from": "2026-05-30",
+    "to": "2026-05-30",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2625,
+    "employee_id": 7721,
+    "from": "2026-05-31",
+    "to": "2026-05-31",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2716,
+    "employee_id": 7813,
+    "from": "2026-05-04",
+    "to": "2026-05-04",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2717,
+    "employee_id": 7813,
+    "from": "2026-05-06",
+    "to": "2026-05-06",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2718,
+    "employee_id": 7813,
+    "from": "2026-05-08",
+    "to": "2026-05-08",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2719,
+    "employee_id": 7813,
+    "from": "2026-05-13",
+    "to": "2026-05-13",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2720,
+    "employee_id": 7813,
+    "from": "2026-05-14",
+    "to": "2026-05-14",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2721,
+    "employee_id": 7813,
+    "from": "2026-05-16",
+    "to": "2026-05-16",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2722,
+    "employee_id": 7813,
+    "from": "2026-05-20",
+    "to": "2026-05-20",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2723,
+    "employee_id": 7813,
+    "from": "2026-05-22",
+    "to": "2026-05-22",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2724,
+    "employee_id": 7813,
+    "from": "2026-05-25",
+    "to": "2026-05-25",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2725,
+    "employee_id": 7813,
+    "from": "2026-05-27",
+    "to": "2026-05-27",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2726,
+    "employee_id": 7813,
+    "from": "2026-05-30",
+    "to": "2026-05-30",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2703,
+    "employee_id": 7813,
+    "from": "2026-06-27",
+    "to": "2026-06-27",
+    "type": "other",
+    "reason": "Einsatz im Familienzentrum",
+    "description": "Einsatz im Familienzentrum",
+    "days": 1
+  },
+  {
+    "id": 2704,
+    "employee_id": 7813,
+    "from": "2026-06-29",
+    "to": "2026-06-29",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2511,
+    "employee_id": 7813,
+    "from": "2026-08-01",
+    "to": "2026-08-01",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2512,
+    "employee_id": 7813,
+    "from": "2026-08-02",
+    "to": "2026-08-02",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2513,
+    "employee_id": 7813,
+    "from": "2026-08-03",
+    "to": "2026-08-03",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2514,
+    "employee_id": 7813,
+    "from": "2026-08-04",
+    "to": "2026-08-04",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2515,
+    "employee_id": 7813,
+    "from": "2026-08-05",
+    "to": "2026-08-05",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2516,
+    "employee_id": 7813,
+    "from": "2026-08-06",
+    "to": "2026-08-06",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2517,
+    "employee_id": 7813,
+    "from": "2026-08-07",
+    "to": "2026-08-07",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2518,
+    "employee_id": 7813,
+    "from": "2026-08-08",
+    "to": "2026-08-08",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2519,
+    "employee_id": 7813,
+    "from": "2026-08-09",
+    "to": "2026-08-09",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2520,
+    "employee_id": 7813,
+    "from": "2026-08-10",
+    "to": "2026-08-10",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2521,
+    "employee_id": 7813,
+    "from": "2026-08-11",
+    "to": "2026-08-11",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2522,
+    "employee_id": 7813,
+    "from": "2026-08-12",
+    "to": "2026-08-12",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2523,
+    "employee_id": 7813,
+    "from": "2026-08-13",
+    "to": "2026-08-13",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2524,
+    "employee_id": 7813,
+    "from": "2026-08-14",
+    "to": "2026-08-14",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2525,
+    "employee_id": 7813,
+    "from": "2026-08-15",
+    "to": "2026-08-15",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2526,
+    "employee_id": 7813,
+    "from": "2026-08-16",
+    "to": "2026-08-16",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2527,
+    "employee_id": 7813,
+    "from": "2026-08-17",
+    "to": "2026-08-17",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2528,
+    "employee_id": 7813,
+    "from": "2026-08-18",
+    "to": "2026-08-18",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2529,
+    "employee_id": 7813,
+    "from": "2026-08-19",
+    "to": "2026-08-19",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2530,
+    "employee_id": 7813,
+    "from": "2026-08-20",
+    "to": "2026-08-20",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2531,
+    "employee_id": 7813,
+    "from": "2026-08-21",
+    "to": "2026-08-21",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2532,
+    "employee_id": 7813,
+    "from": "2026-08-22",
+    "to": "2026-08-22",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2533,
+    "employee_id": 7813,
+    "from": "2026-08-23",
+    "to": "2026-08-23",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2534,
+    "employee_id": 7813,
+    "from": "2026-08-24",
+    "to": "2026-08-24",
+    "type": "vacation",
+    "reason": "abwesend",
+    "description": "abwesend",
+    "days": 1
+  },
+  {
+    "id": 2535,
+    "employee_id": 7813,
+    "from": "2026-10-03",
+    "to": "2026-10-03",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2536,
+    "employee_id": 7813,
+    "from": "2026-10-04",
+    "to": "2026-10-04",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2537,
+    "employee_id": 7813,
+    "from": "2026-10-05",
+    "to": "2026-10-05",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2538,
+    "employee_id": 7813,
+    "from": "2026-10-06",
+    "to": "2026-10-06",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2539,
+    "employee_id": 7813,
+    "from": "2026-10-07",
+    "to": "2026-10-07",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2540,
+    "employee_id": 7813,
+    "from": "2026-10-08",
+    "to": "2026-10-08",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2541,
+    "employee_id": 7813,
+    "from": "2026-10-09",
+    "to": "2026-10-09",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2542,
+    "employee_id": 7813,
+    "from": "2026-10-10",
+    "to": "2026-10-10",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2898,
+    "employee_id": 7833,
+    "from": "2026-05-15",
+    "to": "2026-05-15",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2899,
+    "employee_id": 7833,
+    "from": "2026-05-16",
+    "to": "2026-05-16",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2900,
+    "employee_id": 7833,
+    "from": "2026-05-17",
+    "to": "2026-05-17",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2901,
+    "employee_id": 7833,
+    "from": "2026-05-18",
+    "to": "2026-05-18",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2425,
+    "employee_id": 8360,
+    "from": "2026-07-22",
+    "to": "2026-07-22",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2426,
+    "employee_id": 8360,
+    "from": "2026-07-23",
+    "to": "2026-07-23",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2427,
+    "employee_id": 8360,
+    "from": "2026-07-24",
+    "to": "2026-07-24",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2428,
+    "employee_id": 8360,
+    "from": "2026-07-25",
+    "to": "2026-07-25",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2430,
+    "employee_id": 8360,
+    "from": "2026-07-27",
+    "to": "2026-07-27",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2431,
+    "employee_id": 8360,
+    "from": "2026-07-28",
+    "to": "2026-07-28",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2432,
+    "employee_id": 8360,
+    "from": "2026-07-29",
+    "to": "2026-07-29",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2966,
+    "employee_id": 8639,
+    "from": "2026-05-04",
+    "to": "2026-05-04",
+    "type": "no_show",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2905,
+    "employee_id": 8727,
+    "from": "2026-05-14",
+    "to": "2026-05-14",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2906,
+    "employee_id": 8727,
+    "from": "2026-05-14",
+    "to": "2026-05-14",
+    "type": "other",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2801,
+    "employee_id": 8727,
+    "from": "2026-06-10",
+    "to": "2026-06-10",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2802,
+    "employee_id": 8727,
+    "from": "2026-06-11",
+    "to": "2026-06-11",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2803,
+    "employee_id": 8727,
+    "from": "2026-06-12",
+    "to": "2026-06-12",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2804,
+    "employee_id": 8727,
+    "from": "2026-06-13",
+    "to": "2026-06-13",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2805,
+    "employee_id": 8727,
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2806,
+    "employee_id": 8727,
+    "from": "2026-06-15",
+    "to": "2026-06-15",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2807,
+    "employee_id": 8727,
+    "from": "2026-06-16",
+    "to": "2026-06-16",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2808,
+    "employee_id": 8727,
+    "from": "2026-06-17",
+    "to": "2026-06-17",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2809,
+    "employee_id": 8727,
+    "from": "2026-06-18",
+    "to": "2026-06-18",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2810,
+    "employee_id": 8727,
+    "from": "2026-06-19",
+    "to": "2026-06-19",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2811,
+    "employee_id": 8727,
+    "from": "2026-06-20",
+    "to": "2026-06-20",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2812,
+    "employee_id": 8727,
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2813,
+    "employee_id": 8727,
+    "from": "2026-06-22",
+    "to": "2026-06-22",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2904,
+    "employee_id": 8727,
+    "from": "2026-06-29",
+    "to": "2026-06-29",
+    "type": "other",
+    "reason": ".",
+    "description": ".",
+    "days": 1
+  },
+  {
+    "id": 2965,
+    "employee_id": 8883,
+    "from": "2026-05-04",
+    "to": "2026-05-04",
+    "type": "sick_leave",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2768,
+    "employee_id": 8955,
+    "from": "2026-05-15",
+    "to": "2026-05-15",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2769,
+    "employee_id": 8955,
+    "from": "2026-05-16",
+    "to": "2026-05-16",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2770,
+    "employee_id": 8955,
+    "from": "2026-05-17",
+    "to": "2026-05-17",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2771,
+    "employee_id": 8955,
+    "from": "2026-05-18",
+    "to": "2026-05-18",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2772,
+    "employee_id": 8955,
+    "from": "2026-05-19",
+    "to": "2026-05-19",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2773,
+    "employee_id": 8955,
+    "from": "2026-05-20",
+    "to": "2026-05-20",
+    "type": "vacation",
+    "reason": "",
+    "description": "",
+    "days": 1
+  },
+  {
+    "id": 2913,
+    "employee_id": 9045,
+    "from": "2026-05-07",
+    "to": "2026-05-07",
+    "type": "other",
+    "reason": "UNI",
+    "description": "UNI",
+    "days": 1
+  },
+  {
+    "id": 2914,
+    "employee_id": 9045,
+    "from": "2026-05-14",
+    "to": "2026-05-14",
+    "type": "other",
+    "reason": "UNi",
+    "description": "UNi",
+    "days": 1
+  },
+  {
+    "id": 2915,
+    "employee_id": 9045,
+    "from": "2026-05-21",
+    "to": "2026-05-21",
+    "type": "other",
+    "reason": "UNI",
+    "description": "UNI",
+    "days": 1
+  },
+  {
+    "id": 2916,
+    "employee_id": 9045,
+    "from": "2026-05-28",
+    "to": "2026-05-28",
+    "type": "other",
+    "reason": "UNI",
+    "description": "UNI",
+    "days": 1
+  }
+]

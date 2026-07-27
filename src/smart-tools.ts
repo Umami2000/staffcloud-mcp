@@ -593,6 +593,135 @@ export async function getEmployeeProfile(
   return profile;
 }
 
+// ─── Tool: check_employee_emails ────────────────────────────────
+
+export interface CheckEmployeeEmailsArgs {
+  status?: string;
+  detail?: boolean;
+  employee_ids?: number[];
+}
+
+const EMAIL_REGEX = /^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/;
+
+const ROLE_LOCAL_PARTS = new Set([
+  "info", "admin", "noreply", "no-reply", "support", "contact", "office",
+  "hello", "team", "kontakt", "service", "mail", "postmaster",
+]);
+
+function classifyEmail(raw: string): { ok: boolean; issues: string[]; normalized: string } {
+  const issues: string[] = [];
+  const normalized = raw.trim().toLowerCase();
+  if (!normalized) {
+    return { ok: false, issues: ["missing"], normalized };
+  }
+  if (!EMAIL_REGEX.test(normalized)) {
+    issues.push("invalid_syntax");
+  }
+  if (/\s/.test(raw)) issues.push("whitespace");
+  if (raw !== raw.trim()) issues.push("leading_or_trailing_space");
+  const at = normalized.indexOf("@");
+  if (at > 0) {
+    const local = normalized.substring(0, at);
+    const domain = normalized.substring(at + 1);
+    if (ROLE_LOCAL_PARTS.has(local)) issues.push("role_address");
+    if (!domain.includes(".")) issues.push("no_tld");
+    // Common typos
+    if (/(gmial|gnail|gmali|gmaill|hotnail|outlok|yaho\.|yhoo)/.test(domain)) {
+      issues.push("likely_typo_domain");
+    }
+  }
+  return { ok: issues.length === 0, issues, normalized };
+}
+
+/**
+ * "Audit email addresses across employees" — finds missing, invalid, and duplicate emails.
+ *
+ * Useful before bulk mailings or migrations. By default checks active employees (status=4).
+ * Returns a summary plus optional per-employee detail rows.
+ */
+export async function checkEmployeeEmails(
+  client: StaffCloudClient,
+  args: CheckEmployeeEmailsArgs,
+  piiAccess = false
+): Promise<unknown> {
+  if (!piiAccess) {
+    return {
+      error: "check_employee_emails requires piiAccess. Set STAFFCLOUD_PII_ACCESS=true.",
+    };
+  }
+
+  const params: QueryParams = {
+    fields: "id,firstname,lastname,email,status,updated_at",
+  };
+  if (args.status) params.status = args.status;
+  else if (!args.employee_ids) params.status = "4"; // default: active
+
+  const employees = (await client.listEmployees(params)) as AnyRecord[];
+  const filtered = args.employee_ids
+    ? employees.filter((e) => args.employee_ids!.includes(Number(e.id)))
+    : employees;
+
+  // Group by normalized email to find duplicates
+  const byEmail = new Map<string, number[]>();
+  const rows: Array<{
+    id: number;
+    name: string;
+    status: number;
+    email: string;
+    issues: string[];
+    duplicate_of?: number[];
+  }> = [];
+
+  for (const e of filtered) {
+    const raw = String(e.email ?? "");
+    const cls = classifyEmail(raw);
+    if (cls.normalized) {
+      const list = byEmail.get(cls.normalized) ?? [];
+      list.push(Number(e.id));
+      byEmail.set(cls.normalized, list);
+    }
+    rows.push({
+      id: Number(e.id),
+      name: `${e.firstname ?? ""} ${e.lastname ?? ""}`.trim(),
+      status: Number(e.status),
+      email: raw,
+      issues: cls.issues,
+    });
+  }
+
+  // Mark duplicates
+  for (const r of rows) {
+    if (!r.email) continue;
+    const norm = r.email.trim().toLowerCase();
+    const list = byEmail.get(norm);
+    if (list && list.length > 1) {
+      r.issues.push("duplicate");
+      r.duplicate_of = list.filter((id) => id !== r.id);
+    }
+  }
+
+  const summary = {
+    total: rows.length,
+    missing: rows.filter((r) => r.issues.includes("missing")).length,
+    invalid_syntax: rows.filter((r) => r.issues.includes("invalid_syntax")).length,
+    duplicates: rows.filter((r) => r.issues.includes("duplicate")).length,
+    role_addresses: rows.filter((r) => r.issues.includes("role_address")).length,
+    likely_typo: rows.filter((r) => r.issues.includes("likely_typo_domain")).length,
+    ok: rows.filter((r) => r.issues.length === 0).length,
+  };
+
+  if (!args.detail) {
+    // Return only employees with issues
+    const withIssues = rows.filter((r) => r.issues.length > 0);
+    return {
+      summary,
+      employees_with_issues: withIssues.sort((a, b) => a.id - b.id),
+      hint: "Pass detail=true to see all employees, including those without issues.",
+    };
+  }
+  return { summary, employees: rows.sort((a, b) => a.id - b.id) };
+}
+
 // ─── Tool 4: get_work_hours_summary ─────────────────────────────
 
 export interface WorkHoursSummaryArgs {

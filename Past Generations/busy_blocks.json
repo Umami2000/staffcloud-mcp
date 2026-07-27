@@ -1,0 +1,83 @@
+[
+  {
+    "key": "2921|sick_leave|",
+    "employee_id": 2921,
+    "type": "sick_leave",
+    "reason": "",
+    "from": "2026-05-04",
+    "to": "2026-05-08",
+    "days": 5
+  },
+  {
+    "key": "7721|vacation|",
+    "employee_id": 7721,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-05-04",
+    "to": "2026-05-31",
+    "days": 28
+  },
+  {
+    "key": "1749|vacation|",
+    "employee_id": 1749,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-05-12",
+    "to": "2026-05-17",
+    "days": 6
+  },
+  {
+    "key": "7833|vacation|",
+    "employee_id": 7833,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-05-15",
+    "to": "2026-05-18",
+    "days": 4
+  },
+  {
+    "key": "8955|vacation|",
+    "employee_id": 8955,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-05-15",
+    "to": "2026-05-20",
+    "days": 6
+  },
+  {
+    "key": "8727|vacation|",
+    "employee_id": 8727,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-06-10",
+    "to": "2026-06-22",
+    "days": 13
+  },
+  {
+    "key": "8360|vacation|",
+    "employee_id": 8360,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-07-22",
+    "to": "2026-07-25",
+    "days": 4
+  },
+  {
+    "key": "7813|vacation|abwesend",
+    "employee_id": 7813,
+    "type": "vacation",
+    "reason": "abwesend",
+    "from": "2026-08-01",
+    "to": "2026-08-24",
+    "days": 24
+  },
+  {
+    "key": "7813|vacation|",
+    "employee_id": 7813,
+    "type": "vacation",
+    "reason": "",
+    "from": "2026-10-03",
+    "to": "2026-10-10",
+    "days": 8
+  }
+]

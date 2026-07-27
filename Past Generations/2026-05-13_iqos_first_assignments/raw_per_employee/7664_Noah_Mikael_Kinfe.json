@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 831755,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 35723,
+    "created_at": "2025-11-03 14:55:16",
+    "is_approved": 1,
+    "event_id": 32014
+  },
+  {
+    "id": 831756,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 35724,
+    "created_at": "2025-11-03 14:55:16",
+    "is_approved": 1,
+    "event_id": 32013
+  },
+  {
+    "id": 831757,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 35725,
+    "created_at": "2025-11-03 14:55:16",
+    "is_approved": 1,
+    "event_id": 32012
+  },
+  {
+    "id": 840722,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35525,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31784
+  },
+  {
+    "id": 840744,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35759,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 32048
+  },
+  {
+    "id": 840746,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35760,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 32047
+  },
+  {
+    "id": 840748,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35509,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31800
+  },
+  {
+    "id": 840750,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35510,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31799
+  },
+  {
+    "id": 840752,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35511,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31798
+  },
+  {
+    "id": 840756,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35512,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31797
+  },
+  {
+    "id": 840758,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35513,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31796
+  },
+  {
+    "id": 840760,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35514,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31795
+  },
+  {
+    "id": 840762,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35515,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31794
+  },
+  {
+    "id": 840764,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35516,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31793
+  },
+  {
+    "id": 840766,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35763,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 32051
+  },
+  {
+    "id": 840768,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35517,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31792
+  },
+  {
+    "id": 840770,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35520,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 31789
+  },
+  {
+    "id": 840772,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35767,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 32063
+  },
+  {
+    "id": 840774,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35768,
+    "created_at": "2025-11-05 12:27:53",
+    "is_approved": 0,
+    "event_id": 32062
+  },
+  {
+    "id": 840776,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35521,
+    "created_at": "2025-11-05 12:27:54",
+    "is_approved": 0,
+    "event_id": 31788
+  },
+  {
+    "id": 840780,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35523,
+    "created_at": "2025-11-05 12:27:54",
+    "is_approved": 0,
+    "event_id": 31786
+  },
+  {
+    "id": 840782,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35524,
+    "created_at": "2025-11-05 12:27:54",
+    "is_approved": 0,
+    "event_id": 31785
+  },
+  {
+    "id": 845664,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35747,
+    "created_at": "2025-11-09 10:26:08",
+    "is_approved": 0,
+    "event_id": 32035
+  },
+  {
+    "id": 863006,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34035,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30365
+  },
+  {
+    "id": 863009,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34036,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30364
+  },
+  {
+    "id": 863012,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34037,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30339
+  },
+  {
+    "id": 863015,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34038,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30338
+  },
+  {
+    "id": 863018,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34039,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30337
+  },
+  {
+    "id": 863021,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34040,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30363
+  },
+  {
+    "id": 863023,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34041,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30362
+  },
+  {
+    "id": 863026,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34042,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30361
+  },
+  {
+    "id": 863029,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34043,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30360
+  },
+  {
+    "id": 863032,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34044,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30336
+  },
+  {
+    "id": 863035,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34045,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30335
+  },
+  {
+    "id": 863038,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34046,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30334
+  },
+  {
+    "id": 863041,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34047,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30359
+  },
+  {
+    "id": 863044,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34048,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30358
+  },
+  {
+    "id": 863047,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34049,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30357
+  },
+  {
+    "id": 863050,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34050,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30356
+  },
+  {
+    "id": 863053,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34051,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30333
+  },
+  {
+    "id": 863056,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34052,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30332
+  },
+  {
+    "id": 863059,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34053,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30331
+  },
+  {
+    "id": 863062,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34054,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30355
+  },
+  {
+    "id": 863065,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34055,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30354
+  },
+  {
+    "id": 863071,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34057,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30352
+  },
+  {
+    "id": 863074,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34058,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30330
+  },
+  {
+    "id": 863077,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34059,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30329
+  },
+  {
+    "id": 863080,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34060,
+    "created_at": "2025-11-10 09:51:26",
+    "is_approved": 0,
+    "event_id": 30328
+  },
+  {
+    "id": 863083,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34061,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30351
+  },
+  {
+    "id": 863085,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34062,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30350
+  },
+  {
+    "id": 863088,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34063,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30349
+  },
+  {
+    "id": 863091,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34064,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30348
+  },
+  {
+    "id": 863094,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34065,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30327
+  },
+  {
+    "id": 863096,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34066,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30322
+  },
+  {
+    "id": 863099,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34067,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30326
+  },
+  {
+    "id": 863102,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34068,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30347
+  },
+  {
+    "id": 863104,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34069,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30342
+  },
+  {
+    "id": 863107,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34070,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30346
+  },
+  {
+    "id": 863110,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34071,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30345
+  },
+  {
+    "id": 863113,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34072,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30325
+  },
+  {
+    "id": 863116,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34073,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30324
+  },
+  {
+    "id": 863118,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34074,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30323
+  },
+  {
+    "id": 863120,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34075,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30344
+  },
+  {
+    "id": 863123,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34076,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30343
+  },
+  {
+    "id": 863125,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34077,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30368
+  },
+  {
+    "id": 863296,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34032,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30340
+  },
+  {
+    "id": 863298,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34033,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30367
+  },
+  {
+    "id": 863300,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34034,
+    "created_at": "2025-11-10 09:51:27",
+    "is_approved": 0,
+    "event_id": 30366
+  },
+  {
+    "id": 875083,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34212,
+    "created_at": "2025-11-13 16:20:30",
+    "is_approved": 0,
+    "event_id": 30503
+  },
+  {
+    "id": 875084,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34213,
+    "created_at": "2025-11-13 16:20:30",
+    "is_approved": 0,
+    "event_id": 30503
+  },
+  {
+    "id": 875085,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34214,
+    "created_at": "2025-11-13 16:20:30",
+    "is_approved": 0,
+    "event_id": 30502
+  },
+  {
+    "id": 875086,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34215,
+    "created_at": "2025-11-13 16:20:30",
+    "is_approved": 0,
+    "event_id": 30502
+  },
+  {
+    "id": 875087,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34216,
+    "created_at": "2025-11-13 16:20:30",
+    "is_approved": 0,
+    "event_id": 30501
+  },
+  {
+    "id": 875088,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 34217,
+    "created_at": "2025-11-13 16:20:30",
+    "is_approved": 0,
+    "event_id": 30501
+  },
+  {
+    "id": 878317,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 35895,
+    "created_at": "2025-11-17 16:47:40",
+    "is_approved": 1,
+    "event_id": 32169
+  },
+  {
+    "id": 878318,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 35898,
+    "created_at": "2025-11-17 16:49:49",
+    "is_approved": 1,
+    "event_id": 32170
+  },
+  {
+    "id": 878319,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 35897,
+    "created_at": "2025-11-17 16:49:52",
+    "is_approved": 1,
+    "event_id": 32171
+  },
+  {
+    "id": 878320,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 35896,
+    "created_at": "2025-11-17 16:49:55",
+    "is_approved": 1,
+    "event_id": 32172
+  },
+  {
+    "id": 878322,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 35900,
+    "created_at": "2025-11-17 16:55:32",
+    "is_approved": 1,
+    "event_id": 32174
+  },
+  {
+    "id": 878325,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 35903,
+    "created_at": "2025-11-17 17:16:04",
+    "is_approved": 1,
+    "event_id": 32177
+  },
+  {
+    "id": 879073,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35853,
+    "created_at": "2025-11-19 10:35:44",
+    "is_approved": 0,
+    "event_id": 32134
+  },
+  {
+    "id": 879074,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35857,
+    "created_at": "2025-11-19 10:35:44",
+    "is_approved": 0,
+    "event_id": 32132
+  },
+  {
+    "id": 879854,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37419,
+    "created_at": "2025-11-20 17:25:53",
+    "is_approved": 1,
+    "event_id": 34215
+  },
+  {
+    "id": 879855,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37420,
+    "created_at": "2025-11-20 17:25:56",
+    "is_approved": 1,
+    "event_id": 34229
+  },
+  {
+    "id": 879860,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37427,
+    "created_at": "2025-11-20 17:30:00",
+    "is_approved": 1,
+    "event_id": 34235
+  },
+  {
+    "id": 879861,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37426,
+    "created_at": "2025-11-20 17:30:02",
+    "is_approved": 1,
+    "event_id": 34211
+  },
+  {
+    "id": 879862,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37431,
+    "created_at": "2025-11-20 17:30:07",
+    "is_approved": 1,
+    "event_id": 34212
+  },
+  {
+    "id": 879864,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37430,
+    "created_at": "2025-11-20 17:30:14",
+    "is_approved": 1,
+    "event_id": 34204
+  },
+  {
+    "id": 879866,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37434,
+    "created_at": "2025-11-20 17:32:10",
+    "is_approved": 1,
+    "event_id": 34258
+  },
+  {
+    "id": 879867,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37440,
+    "created_at": "2025-11-20 17:32:13",
+    "is_approved": 1,
+    "event_id": 34257
+  },
+  {
+    "id": 879868,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37437,
+    "created_at": "2025-11-20 17:32:16",
+    "is_approved": 1,
+    "event_id": 34260
+  },
+  {
+    "id": 879869,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37436,
+    "created_at": "2025-11-20 17:32:20",
+    "is_approved": 1,
+    "event_id": 34262
+  },
+  {
+    "id": 879872,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37439,
+    "created_at": "2025-11-20 17:32:33",
+    "is_approved": 1,
+    "event_id": 34261
+  },
+  {
+    "id": 879891,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37527,
+    "created_at": "2025-11-20 17:37:38",
+    "is_approved": 1,
+    "event_id": 34375
+  },
+  {
+    "id": 879892,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37526,
+    "created_at": "2025-11-20 17:37:42",
+    "is_approved": 1,
+    "event_id": 34346
+  },
+  {
+    "id": 879897,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 37539,
+    "created_at": "2025-11-20 17:38:41",
+    "is_approved": 1,
+    "event_id": 34330
+  },
+  {
+    "id": 880688,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38028,
+    "created_at": "2025-11-24 09:47:57",
+    "is_approved": 0,
+    "event_id": 35392
+  },
+  {
+    "id": 884550,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 38070,
+    "created_at": "2025-11-26 11:59:08",
+    "is_approved": 1,
+    "event_id": 35427
+  },
+  {
+    "id": 885732,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38437,
+    "created_at": "2025-11-28 12:54:03",
+    "is_approved": 0,
+    "event_id": 35773
+  },
+  {
+    "id": 888511,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35851,
+    "created_at": "2025-12-01 15:53:16",
+    "is_approved": 0,
+    "event_id": 32135
+  },
+  {
+    "id": 888514,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35852,
+    "created_at": "2025-12-01 15:53:16",
+    "is_approved": 0,
+    "event_id": 32135
+  },
+  {
+    "id": 888517,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35855,
+    "created_at": "2025-12-01 15:53:16",
+    "is_approved": 0,
+    "event_id": 32134
+  },
+  {
+    "id": 888520,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35854,
+    "created_at": "2025-12-01 15:53:16",
+    "is_approved": 0,
+    "event_id": 32133
+  },
+  {
+    "id": 888523,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35856,
+    "created_at": "2025-12-01 15:53:16",
+    "is_approved": 0,
+    "event_id": 32133
+  },
+  {
+    "id": 892521,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35845,
+    "created_at": "2025-12-01 15:54:27",
+    "is_approved": 0,
+    "event_id": 32131
+  },
+  {
+    "id": 892525,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35846,
+    "created_at": "2025-12-01 15:54:27",
+    "is_approved": 0,
+    "event_id": 32131
+  },
+  {
+    "id": 892529,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35847,
+    "created_at": "2025-12-01 15:54:27",
+    "is_approved": 0,
+    "event_id": 32131
+  },
+  {
+    "id": 892532,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35848,
+    "created_at": "2025-12-01 15:54:27",
+    "is_approved": 0,
+    "event_id": 32130
+  },
+  {
+    "id": 892535,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35849,
+    "created_at": "2025-12-01 15:54:27",
+    "is_approved": 0,
+    "event_id": 32130
+  },
+  {
+    "id": 892538,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35850,
+    "created_at": "2025-12-01 15:54:27",
+    "is_approved": 0,
+    "event_id": 32128
+  },
+  {
+    "id": 898369,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38014,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 35382
+  },
+  {
+    "id": 898370,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38013,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 35382
+  },
+  {
+    "id": 898371,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38015,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 35381
+  },
+  {
+    "id": 898372,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38016,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 35381
+  },
+  {
+    "id": 898373,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38017,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 35380
+  },
+  {
+    "id": 898374,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38018,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 35380
+  },
+  {
+    "id": 898375,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35858,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32139
+  },
+  {
+    "id": 898376,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35861,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32139
+  },
+  {
+    "id": 898377,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35859,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32138
+  },
+  {
+    "id": 898378,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35862,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32138
+  },
+  {
+    "id": 898379,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35863,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32137
+  },
+  {
+    "id": 898380,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35864,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32137
+  },
+  {
+    "id": 898381,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35865,
+    "created_at": "2025-12-01 17:24:01",
+    "is_approved": 0,
+    "event_id": 32136
+  },
+  {
+    "id": 904517,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38601,
+    "created_at": "2025-12-05 10:48:14",
+    "is_approved": 0,
+    "event_id": 35880
+  },
+  {
+    "id": 904519,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38603,
+    "created_at": "2025-12-05 10:48:14",
+    "is_approved": 0,
+    "event_id": 35882
+  },
+  {
+    "id": 904521,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38604,
+    "created_at": "2025-12-05 10:48:14",
+    "is_approved": 0,
+    "event_id": 35883
+  },
+  {
+    "id": 904523,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 38602,
+    "created_at": "2025-12-05 10:48:14",
+    "is_approved": 0,
+    "event_id": 35881
+  },
+  {
+    "id": 910204,
+    "status": 8,
+    "employee_id": 7664,
+    "event_function_id": 38729,
+    "created_at": "2025-12-16 02:05:10",
+    "is_approved": 0,
+    "event_id": 36000
+  },
+  {
+    "id": 912496,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 39013,
+    "created_at": "2025-12-16 15:16:37",
+    "is_approved": 0,
+    "event_id": 36007
+  },
+  {
+    "id": 912497,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 39014,
+    "created_at": "2025-12-16 15:16:37",
+    "is_approved": 0,
+    "event_id": 36009
+  },
+  {
+    "id": 912498,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 39016,
+    "created_at": "2025-12-16 15:16:37",
+    "is_approved": 0,
+    "event_id": 36010
+  },
+  {
+    "id": 913519,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35774,
+    "created_at": "2025-12-17 11:55:03",
+    "is_approved": 0,
+    "event_id": 32057
+  },
+  {
+    "id": 913521,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35775,
+    "created_at": "2025-12-17 11:55:03",
+    "is_approved": 0,
+    "event_id": 32056
+  },
+  {
+    "id": 913523,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35776,
+    "created_at": "2025-12-17 11:55:03",
+    "is_approved": 0,
+    "event_id": 32055
+  },
+  {
+    "id": 913679,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 39024,
+    "created_at": "2025-12-17 16:54:57",
+    "is_approved": 1,
+    "event_id": 36295
+  },
+  {
+    "id": 914088,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 35522,
+    "created_at": "2025-12-20 09:48:11",
+    "is_approved": 0,
+    "event_id": 31787
+  },
+  {
+    "id": 914139,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39711,
+    "created_at": "2025-12-20 14:55:11",
+    "is_approved": 1,
+    "event_id": 39360
+  },
+  {
+    "id": 914140,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39713,
+    "created_at": "2025-12-20 14:55:35",
+    "is_approved": 1,
+    "event_id": 39402
+  },
+  {
+    "id": 914144,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39716,
+    "created_at": "2025-12-20 14:57:58",
+    "is_approved": 1,
+    "event_id": 39397
+  },
+  {
+    "id": 914163,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39735,
+    "created_at": "2025-12-20 15:04:36",
+    "is_approved": 1,
+    "event_id": 39393
+  },
+  {
+    "id": 914164,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39736,
+    "created_at": "2025-12-20 15:04:39",
+    "is_approved": 1,
+    "event_id": 39398
+  },
+  {
+    "id": 914166,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39747,
+    "created_at": "2025-12-20 15:05:58",
+    "is_approved": 1,
+    "event_id": 39403
+  },
+  {
+    "id": 914168,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39745,
+    "created_at": "2025-12-20 15:06:03",
+    "is_approved": 1,
+    "event_id": 39368
+  },
+  {
+    "id": 914169,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39744,
+    "created_at": "2025-12-20 15:06:12",
+    "is_approved": 1,
+    "event_id": 39364
+  },
+  {
+    "id": 914172,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39751,
+    "created_at": "2025-12-20 15:07:06",
+    "is_approved": 1,
+    "event_id": 39392
+  },
+  {
+    "id": 914173,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39750,
+    "created_at": "2025-12-20 15:07:09",
+    "is_approved": 1,
+    "event_id": 39371
+  },
+  {
+    "id": 914359,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 39781,
+    "created_at": "2025-12-21 21:01:09",
+    "is_approved": 1,
+    "event_id": 39434
+  },
+  {
+    "id": 917733,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40426,
+    "created_at": "2025-12-24 13:57:00",
+    "is_approved": 0,
+    "event_id": 40082
+  },
+  {
+    "id": 917734,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40430,
+    "created_at": "2025-12-24 13:57:00",
+    "is_approved": 0,
+    "event_id": 40082
+  },
+  {
+    "id": 917735,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40434,
+    "created_at": "2025-12-24 13:57:00",
+    "is_approved": 0,
+    "event_id": 40082
+  },
+  {
+    "id": 917739,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40428,
+    "created_at": "2025-12-24 13:57:00",
+    "is_approved": 0,
+    "event_id": 40080
+  },
+  {
+    "id": 917740,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40432,
+    "created_at": "2025-12-24 13:57:00",
+    "is_approved": 0,
+    "event_id": 40080
+  },
+  {
+    "id": 917741,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40436,
+    "created_at": "2025-12-24 13:57:01",
+    "is_approved": 0,
+    "event_id": 40080
+  },
+  {
+    "id": 917742,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40429,
+    "created_at": "2025-12-24 13:57:01",
+    "is_approved": 0,
+    "event_id": 40079
+  },
+  {
+    "id": 917743,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40433,
+    "created_at": "2025-12-24 13:57:01",
+    "is_approved": 0,
+    "event_id": 40079
+  },
+  {
+    "id": 917744,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 40437,
+    "created_at": "2025-12-24 13:57:01",
+    "is_approved": 0,
+    "event_id": 40079
+  },
+  {
+    "id": 930676,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 44625,
+    "created_at": "2026-01-19 08:54:40",
+    "is_approved": 0,
+    "event_id": 45847
+  },
+  {
+    "id": 930677,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 44624,
+    "created_at": "2026-01-19 08:54:40",
+    "is_approved": 0,
+    "event_id": 45846
+  },
+  {
+    "id": 935288,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45587,
+    "created_at": "2026-01-21 17:28:08",
+    "is_approved": 1,
+    "event_id": 46759
+  },
+  {
+    "id": 935317,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45651,
+    "created_at": "2026-01-21 17:32:18",
+    "is_approved": 1,
+    "event_id": 46869
+  },
+  {
+    "id": 935325,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45671,
+    "created_at": "2026-01-21 17:34:39",
+    "is_approved": 1,
+    "event_id": 46879
+  },
+  {
+    "id": 935326,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45672,
+    "created_at": "2026-01-21 17:34:41",
+    "is_approved": 1,
+    "event_id": 46850
+  },
+  {
+    "id": 935327,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45673,
+    "created_at": "2026-01-21 17:34:44",
+    "is_approved": 1,
+    "event_id": 46857
+  },
+  {
+    "id": 935336,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45757,
+    "created_at": "2026-01-21 17:37:39",
+    "is_approved": 1,
+    "event_id": 46956
+  },
+  {
+    "id": 935344,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45800,
+    "created_at": "2026-01-21 17:47:17",
+    "is_approved": 1,
+    "event_id": 46981
+  },
+  {
+    "id": 935347,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45847,
+    "created_at": "2026-01-21 17:50:49",
+    "is_approved": 1,
+    "event_id": 47045
+  },
+  {
+    "id": 963224,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 45680,
+    "created_at": "2026-02-03 15:53:42",
+    "is_approved": 1,
+    "event_id": 46882
+  },
+  {
+    "id": 963496,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 47342,
+    "created_at": "2026-02-11 11:27:48",
+    "is_approved": 1,
+    "event_id": 48576
+  },
+  {
+    "id": 965637,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 49958,
+    "created_at": "2026-02-17 19:49:14",
+    "is_approved": 1,
+    "event_id": 51175
+  },
+  {
+    "id": 966255,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 49960,
+    "created_at": "2026-02-18 17:13:07",
+    "is_approved": 1,
+    "event_id": 51178
+  },
+  {
+    "id": 966256,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 49961,
+    "created_at": "2026-02-18 17:13:07",
+    "is_approved": 1,
+    "event_id": 51177
+  },
+  {
+    "id": 966287,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 49964,
+    "created_at": "2026-02-18 18:18:53",
+    "is_approved": 1,
+    "event_id": 51181
+  },
+  {
+    "id": 967051,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 52540,
+    "created_at": "2026-02-21 10:29:16",
+    "is_approved": 0,
+    "event_id": 54059
+  },
+  {
+    "id": 967052,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 52536,
+    "created_at": "2026-02-21 10:29:20",
+    "is_approved": 0,
+    "event_id": 54040
+  },
+  {
+    "id": 967088,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 54279,
+    "created_at": "2026-02-23 09:09:37",
+    "is_approved": 1,
+    "event_id": 55789
+  },
+  {
+    "id": 967139,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 53382,
+    "created_at": "2026-02-24 10:00:43",
+    "is_approved": 1,
+    "event_id": 54885
+  },
+  {
+    "id": 967140,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 53388,
+    "created_at": "2026-02-24 10:01:11",
+    "is_approved": 1,
+    "event_id": 54903
+  },
+  {
+    "id": 967141,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 53392,
+    "created_at": "2026-02-24 10:01:40",
+    "is_approved": 0,
+    "event_id": 54904
+  },
+  {
+    "id": 967142,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 53394,
+    "created_at": "2026-02-24 10:01:46",
+    "is_approved": 1,
+    "event_id": 54896
+  },
+  {
+    "id": 967144,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 53400,
+    "created_at": "2026-02-24 10:29:32",
+    "is_approved": 0,
+    "event_id": 54905
+  },
+  {
+    "id": 967146,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 53496,
+    "created_at": "2026-02-24 10:30:43",
+    "is_approved": 1,
+    "event_id": 55034
+  },
+  {
+    "id": 967147,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 54016,
+    "created_at": "2026-02-24 10:31:33",
+    "is_approved": 1,
+    "event_id": 55523
+  },
+  {
+    "id": 967148,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 52661,
+    "created_at": "2026-02-24 11:07:55",
+    "is_approved": 1,
+    "event_id": 54172
+  },
+  {
+    "id": 967149,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 54030,
+    "created_at": "2026-02-24 11:14:39",
+    "is_approved": 1,
+    "event_id": 55556
+  },
+  {
+    "id": 975624,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 54416,
+    "created_at": "2026-02-27 13:13:59",
+    "is_approved": 1,
+    "event_id": 55987
+  },
+  {
+    "id": 975811,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 54433,
+    "created_at": "2026-03-02 08:12:17",
+    "is_approved": 1,
+    "event_id": 55996
+  },
+  {
+    "id": 982105,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 54210,
+    "created_at": "2026-03-06 11:36:18",
+    "is_approved": 0,
+    "event_id": 55719
+  },
+  {
+    "id": 984612,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 54837,
+    "created_at": "2026-03-18 17:14:35",
+    "is_approved": 0,
+    "event_id": 56378
+  },
+  {
+    "id": 984652,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55985,
+    "created_at": "2026-03-18 18:19:20",
+    "is_approved": 0,
+    "event_id": 57517
+  },
+  {
+    "id": 984653,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55986,
+    "created_at": "2026-03-18 18:19:25",
+    "is_approved": 0,
+    "event_id": 57556
+  },
+  {
+    "id": 984654,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55990,
+    "created_at": "2026-03-18 18:19:30",
+    "is_approved": 0,
+    "event_id": 57529
+  },
+  {
+    "id": 984655,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55994,
+    "created_at": "2026-03-18 18:19:35",
+    "is_approved": 0,
+    "event_id": 57518
+  },
+  {
+    "id": 984698,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55813,
+    "created_at": "2026-03-18 18:33:01",
+    "is_approved": 0,
+    "event_id": 57348
+  },
+  {
+    "id": 984787,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55488,
+    "created_at": "2026-03-18 19:04:41",
+    "is_approved": 0,
+    "event_id": 57075
+  },
+  {
+    "id": 984788,
+    "status": 7,
+    "employee_id": 7664,
+    "event_function_id": 55482,
+    "created_at": "2026-03-18 19:04:47",
+    "is_approved": 0,
+    "event_id": 57025
+  },
+  {
+    "id": 984956,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 56139,
+    "created_at": "2026-03-20 18:44:07",
+    "is_approved": 1,
+    "event_id": 57672
+  },
+  {
+    "id": 1046998,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 56726,
+    "created_at": "2026-04-21 15:20:14",
+    "is_approved": 1,
+    "event_id": 58192
+  },
+  {
+    "id": 1056869,
+    "status": 1,
+    "employee_id": 7664,
+    "event_function_id": 56761,
+    "created_at": "2026-04-30 10:58:13",
+    "is_approved": 0,
+    "event_id": 58222
+  },
+  {
+    "id": 1065770,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 56791,
+    "created_at": "2026-05-05 15:27:46",
+    "is_approved": 1,
+    "event_id": 58249
+  },
+  {
+    "id": 1065815,
+    "status": 6,
+    "employee_id": 7664,
+    "event_function_id": 56792,
+    "created_at": "2026-05-05 18:40:00",
+    "is_approved": 1,
+    "event_id": 58250
+  }
+]
