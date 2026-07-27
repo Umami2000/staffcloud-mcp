@@ -10,3 +10,5 @@ dist/
 .auto-claude/
 .claude/
 CLAUDE.md
+.playwright-mcp/
+*.bak-*
